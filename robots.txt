@@ -1,19 +1,19 @@
 User-agent: *
 Allow: /
-Disallow: /images/
+Allow: /images/
+Allow: /css/
+Allow: /js/
 
 # Sitemap
 Sitemap: https://rohittravels.com/sitemap.xml
 
-# Crawl-delay (optional - be nice to servers)
-Crawl-delay: 1
-
-# Google Bot
+# Google Bot - Priority Access
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
 
 # Bing Bot
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
+
+# Host
+Host: https://rohittravels.com
