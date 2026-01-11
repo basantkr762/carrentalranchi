@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Disallow: /images/
+
+# Sitemap
+Sitemap: https://rohittravels.com/sitemap.xml
+
+# Crawl-delay (optional - be nice to servers)
+Crawl-delay: 1
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

@@ -1726,6 +1726,30 @@ img {
     opacity: 1;
 }
 
+/* Footer Social Links */
+.footer-col .social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-col .social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 18px;
+    transition: var(--transition);
+}
+
+.footer-col .social-links a:hover {
+    background: var(--gradient-primary);
+    transform: translateY(-3px);
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 30px;
