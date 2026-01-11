@@ -736,5 +736,5 @@ document.addEventListener('mousemove', (e) => {
     cursorGlow.style.top = e.clientY + 'px';
 });
 
-console.log('%c🚗 Car Rental Ranchi', 'font-size: 24px; font-weight: bold; color: #667eea; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);');
+console.log('%c🚗 Rohit travels', 'font-size: 24px; font-weight: bold; color: #667eea; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);');
 console.log('%cWebsite Loaded Successfully!', 'font-size: 14px; color: #38ef7d;');
