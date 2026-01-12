@@ -300,22 +300,49 @@
                 </div>
                 <div class="hero-form">
                     <h3>Book Your Ride</h3>
-                    <form id="bookingForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <input type="hidden" name="_subject" value="New Booking Request from Rohit travels">
+                    <form id="customBookingForm" method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLSdPrjsDtouGldWc3OcUciV7Gavjs4CkjZyVyEPKaGrUblanmg/formResponse" target="hidden_iframe" onsubmit="return submitBookingForm();">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="text" name="entry.1071487397" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                            <input type="tel" name="entry.429615587" placeholder="Phone Number" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Email Address">
+                            <input type="text" name="entry.713662380" placeholder="Pickup Location" required>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="Message" rows="3"></textarea>
+                            <input type="text" name="entry.929679028" placeholder="Drop Location" required>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Send</button>
+                        <div class="form-group">
+                            <input type="date" name="entry.1937996992" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="entry.488826511" placeholder="Message" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="bookingSubmitBtn">Send</button>
+                        <div id="bookingSuccessMsg" style="display:none;color:#11998e;margin-top:10px;font-weight:600;background:#e6fff2;padding:12px 18px;border-radius:8px;text-align:center;">Thank you! Your booking has been submitted successfully. We will contact you soon.</div>
                     </form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                    <script>
+                    function submitBookingForm() {
+                        var form = document.getElementById('customBookingForm');
+                        var msg = document.getElementById('bookingSuccessMsg');
+                        var btn = document.getElementById('bookingSubmitBtn');
+                        btn.disabled = true;
+                        btn.textContent = 'Sending...';
+                        msg.style.display = 'none';
+                        setTimeout(function() {
+                            form.reset();
+                            btn.disabled = false;
+                            btn.textContent = 'Send';
+                            msg.style.display = 'block';
+                            setTimeout(function() {
+                                msg.style.display = 'none';
+                            }, 5000);
+                        }, 1200);
+                        return true;
+                    }
+                    </script>
                 </div>
             </div>
         </div>
