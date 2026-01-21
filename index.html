@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#11998e">
+    <meta name="msapplication-TileColor" content="#11998e">
+    
     <!-- DNS Prefetch & Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,6 +59,16 @@
     <meta name="geo.position" content="23.3441;85.3096">
     <meta name="ICBM" content="23.3441, 85.3096">
     
+    <!-- Additional Business Meta Tags -->
+    <meta name="contact" content="+91-7903629240">
+    <meta name="coverage" content="Ranchi, Jharkhand, India">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Rohit Travels">
+    
     <!-- Schema.org Local Business Markup -->
     <script type="application/ld+json">
     {
@@ -65,9 +82,10 @@
         "telephone": "+91-7903629240",
         "email": "rohittravels10@gmail.com",
         "address": {
-            "@type": "834003",
+            "@type": "PostalAddress",
             "addressLocality": "Ranchi",
             "addressRegion": "Jharkhand",
+            "postalCode": "834003",
             "addressCountry": "IN"
         },
         "geo": {
@@ -83,6 +101,17 @@
         },
         "priceRange": "₹₹",
         "image": "https://rohittravels.com/images/hero-bg.jpg",
+        "knowsAbout": [
+            "Car Rental",
+            "Taxi Service",
+            "Airport Transfer",
+            "Wedding Car Booking",
+            "Outstation Cab",
+            "Corporate Transportation",
+            "Luxury Car Rental"
+        ],
+        "paymentAccepted": "Cash, UPI, Credit Card, Debit Card",
+        "currenciesAccepted": "INR",
         "sameAs": [
             "https://www.facebook.com/rohittravelsranchi",
             "https://www.instagram.com/rohittravelsranchi"
@@ -336,23 +365,42 @@
     }
     </script>
 
-    <!-- Individual Product Schema for Better Display -->
+    <!-- Service Schema for Car Rentals (No E-commerce Issues) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Ertiga Car Rental Service",
-        "description": "7-seater Maruti Suzuki Ertiga car rental in Ranchi for family trips and outstation travel",
+        "@type": "Service",
+        "serviceType": "Ertiga Car Rental",
+        "name": "Maruti Suzuki Ertiga 7-Seater Car Rental in Ranchi",
+        "description": "Book comfortable 7-seater Maruti Suzuki Ertiga for family trips, outstation travel, and airport transfers in Ranchi. Professional driver included.",
         "image": "https://rohittravels.com/images/ertiga.jpg",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Rohit Travels Ranchi",
+            "telephone": "+91-7903629240",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ranchi",
+                "addressRegion": "Jharkhand",
+                "postalCode": "834003",
+                "addressCountry": "IN"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Ranchi, Jharkhand, India"
+        },
         "brand": {
             "@type": "Brand",
             "name": "Maruti Suzuki"
         },
-        "category": "Car Rental Service",
+        "category": "Transportation Service",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.8",
-            "reviewCount": "1250"
+            "reviewCount": "1250",
+            "bestRating": "5",
+            "worstRating": "1"
         },
         "review": {
             "@type": "Review",
@@ -374,13 +422,16 @@
             "priceValidUntil": "2026-12-31",
             "availability": "https://schema.org/InStock",
             "url": "https://rohittravels.com/#cars",
-            "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
-            "itemCondition": "https://schema.org/UsedCondition",
             "priceSpecification": {
                 "@type": "UnitPriceSpecification",
                 "price": "11",
                 "priceCurrency": "INR",
-                "unitText": "per kilometer"
+                "unitText": "per kilometer",
+                "referenceQuantity": {
+                    "@type": "QuantitativeValue",
+                    "value": "1",
+                    "unitCode": "KMT"
+                }
             },
             "eligibleRegion": {
                 "@type": "Place",
@@ -393,19 +444,38 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Innova Crysta Rental Service",
-        "description": "Premium Toyota Innova Crysta car rental for comfortable long-distance travel from Ranchi",
+        "@type": "Service",
+        "serviceType": "Innova Crysta Car Rental",
+        "name": "Toyota Innova Crysta Premium Car Rental in Ranchi",
+        "description": "Book premium Toyota Innova Crysta for comfortable long-distance outstation travel from Ranchi. Perfect for family trips to Jamshedpur, Patna, Kolkata.",
         "image": "https://rohittravels.com/images/crista.jpeg",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Rohit Travels Ranchi",
+            "telephone": "+91-7903629240",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ranchi",
+                "addressRegion": "Jharkhand",
+                "postalCode": "834003",
+                "addressCountry": "IN"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Ranchi, Jharkhand, India"
+        },
         "brand": {
             "@type": "Brand",
             "name": "Toyota"
         },
-        "category": "Car Rental Service",
+        "category": "Transportation Service",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
-            "reviewCount": "2100"
+            "reviewCount": "2100",
+            "bestRating": "5",
+            "worstRating": "1"
         },
         "review": {
             "@type": "Review",
@@ -427,13 +497,16 @@
             "priceValidUntil": "2026-12-31",
             "availability": "https://schema.org/InStock",
             "url": "https://rohittravels.com/#cars",
-            "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
-            "itemCondition": "https://schema.org/UsedCondition",
             "priceSpecification": {
                 "@type": "UnitPriceSpecification",
                 "price": "13",
                 "priceCurrency": "INR",
-                "unitText": "per kilometer"
+                "unitText": "per kilometer",
+                "referenceQuantity": {
+                    "@type": "QuantitativeValue",
+                    "value": "1",
+                    "unitCode": "KMT"
+                }
             },
             "eligibleRegion": {
                 "@type": "Place",
@@ -446,15 +519,34 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Luxury Car Rental Service - Audi & BMW",
-        "description": "Audi and BMW luxury car rental for weddings and special occasions in Ranchi",
+        "@type": "Service",
+        "serviceType": "Luxury Car Rental",
+        "name": "Audi & BMW Luxury Car Rental for Weddings in Ranchi",
+        "description": "Book Audi and BMW luxury cars for weddings, special occasions, and VIP events in Ranchi. Professional chauffeur and car decoration included.",
         "image": "https://rohittravels.com/images/audi.jpg",
-        "category": "Luxury Car Rental Service",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Rohit Travels Ranchi",
+            "telephone": "+91-7903629240",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ranchi",
+                "addressRegion": "Jharkhand",
+                "postalCode": "834003",
+                "addressCountry": "IN"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Ranchi, Jharkhand, India"
+        },
+        "category": "Wedding Transportation Service",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
-            "reviewCount": "850"
+            "reviewCount": "850",
+            "bestRating": "5",
+            "worstRating": "1"
         },
         "review": {
             "@type": "Review",
@@ -476,13 +568,16 @@
             "priceValidUntil": "2026-12-31",
             "availability": "https://schema.org/InStock",
             "url": "https://rohittravels.com/#cars",
-            "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
-            "itemCondition": "https://schema.org/UsedCondition",
             "priceSpecification": {
                 "@type": "UnitPriceSpecification",
                 "price": "20",
                 "priceCurrency": "INR",
-                "unitText": "per kilometer"
+                "unitText": "per kilometer",
+                "referenceQuantity": {
+                    "@type": "QuantitativeValue",
+                    "value": "1",
+                    "unitCode": "KMT"
+                }
             },
             "eligibleRegion": {
                 "@type": "Place",
@@ -505,6 +600,205 @@
             "worstRating": "1",
             "ratingCount": "5000"
         }
+    }
+    </script>
+
+    <!-- HowTo Schema - Booking Process -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Book a Car Rental in Ranchi with Rohit Travels",
+        "description": "Simple step-by-step guide to book your car rental, taxi, or cab service in Ranchi, Jharkhand with Rohit Travels. Get instant confirmation and best prices.",
+        "image": "https://rohittravels.com/images/hero-bg.jpg",
+        "totalTime": "PT5M",
+        "estimatedCost": {
+            "@type": "MonetaryAmount",
+            "currency": "INR",
+            "value": "9.00"
+        },
+        "step": [
+            {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Contact Us",
+                "text": "Call us at +91-7903629240 or WhatsApp for instant booking",
+                "url": "https://rohittravels.com/#contact"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Choose Your Car",
+                "text": "Select from our wide range of cars including Sedan, SUV, Ertiga, Innova Crysta, or Luxury cars like Audi and BMW",
+                "url": "https://rohittravels.com/#cars"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Share Trip Details",
+                "text": "Provide your pickup location, destination, date and time, and number of passengers"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 4,
+                "name": "Get Instant Quote",
+                "text": "Receive competitive pricing starting from ₹9/km with transparent costs - no hidden charges"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 5,
+                "name": "Confirm Booking",
+                "text": "Confirm your booking and receive SMS/Email confirmation with driver and vehicle details"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 6,
+                "name": "Enjoy Your Ride",
+                "text": "Our professional driver will arrive on time with a clean, well-maintained vehicle for a comfortable journey"
+            }
+        ]
+    }
+    </script>
+
+    <!-- ItemList Schema - Popular Routes -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Popular Car Rental Routes from Ranchi",
+        "description": "Most popular outstation cab routes and destinations from Ranchi with competitive pricing",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "Trip",
+                    "name": "Ranchi to Jamshedpur Cab",
+                    "description": "Comfortable taxi service from Ranchi to Jamshedpur (135 km). Book now for ₹9/km"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "Trip",
+                    "name": "Ranchi to Patna Taxi",
+                    "description": "Affordable cab service from Ranchi to Patna (330 km). Starting at ₹9/km"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@type": "Trip",
+                    "name": "Ranchi to Kolkata Car Rental",
+                    "description": "Long distance taxi from Ranchi to Kolkata (420 km). Best rates at ₹9/km"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@type": "Trip",
+                    "name": "Ranchi to Bokaro Cab",
+                    "description": "Quick and comfortable taxi from Ranchi to Bokaro (110 km). Book at ₹9/km"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                    "@type": "Trip",
+                    "name": "Ranchi to Dhanbad Taxi",
+                    "description": "Reliable cab service from Ranchi to Dhanbad (160 km). Starting ₹9/km"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 6,
+                "item": {
+                    "@type": "Trip",
+                    "name": "Ranchi to Varanasi Car Rental",
+                    "description": "Spiritual journey taxi from Ranchi to Varanasi (480 km). ₹9/km onwards"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- OfferCatalog Schema - Service Packages -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "OfferCatalog",
+        "name": "Rohit Travels Car Rental Services Ranchi",
+        "description": "Complete car rental and taxi services in Ranchi - one way, round trip, airport transfer, wedding cars, and corporate bookings",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "One Way Taxi Service Ranchi",
+                    "description": "One-way car rental from Ranchi to any destination in Jharkhand and nearby states"
+                },
+                "price": "9.00",
+                "priceCurrency": "INR",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "9.00",
+                    "priceCurrency": "INR",
+                    "unitText": "per kilometer"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Round Trip Cab Service Ranchi",
+                    "description": "Round trip car rental with driver for outstation journeys from Ranchi"
+                },
+                "price": "9.00",
+                "priceCurrency": "INR",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "9.00",
+                    "priceCurrency": "INR",
+                    "unitText": "per kilometer"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Airport Taxi Service Ranchi",
+                    "description": "Birsa Munda Airport pickup and drop service with on-time guaranteed arrival"
+                },
+                "price": "9.00",
+                "priceCurrency": "INR",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "9.00",
+                    "priceCurrency": "INR",
+                    "unitText": "per kilometer"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Wedding Car Booking Ranchi",
+                    "description": "Luxury car rental for weddings - Audi, BMW, and decorated vehicles available"
+                },
+                "price": "20.00",
+                "priceCurrency": "INR",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "20.00",
+                    "priceCurrency": "INR",
+                    "unitText": "per kilometer"
+                }
+            }
+        ]
     }
     </script>
 
@@ -1036,7 +1330,12 @@
             <div class="cta-content">
                 <h2>Trusted Car Rental Service in Ranchi</h2>
                 <p>IF YOU CHOOSE OUR SERVICES THEN YOU ARE NOT GOING TO REGRET IT LATER. WE WILL FULFILL EVERY TYPE OF SERVICES MENTIONED IN THE PLAN YOU CHOOSE.</p>
-                <a href="tel:+917903629240" class="btn btn-light">Contact Us Now</a>
+                <div style="margin-top: 30px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:+917903629240" class="btn btn-light" style="font-size: 18px; padding: 15px 40px;">📞 Call Now</a>
+                    <a href="https://wa.me/917903629240?text=Hi%2C%20I%20want%20to%20book%20a%20car%20from%20Rohit%20Travels" class="btn" style="background: #25D366; color: white; font-size: 18px; padding: 15px 40px; border-radius: 30px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Now
+                    </a>
+                </div>
             </div>
         </div>
     </section>
