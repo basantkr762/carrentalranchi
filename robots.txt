@@ -1,19 +1,29 @@
 User-agent: *
 Allow: /
-Allow: /images/
-Allow: /css/
-Allow: /js/
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /*.json$
 
 # Sitemap
 Sitemap: https://rohittravels.com/sitemap.xml
 
-# Google Bot - Priority Access
+# Crawl delay for bots
+Crawl-delay: 1
+
+# Google Bot
 User-agent: Googlebot
 Allow: /
+Disallow: /cgi-bin/
 
 # Bing Bot
 User-agent: Bingbot
 Allow: /
+Disallow: /cgi-bin/
 
-# Host
-Host: https://rohittravels.com
+# Baidu Bot
+User-agent: Baiduspider
+Allow: /
+
+# Yandex Bot
+User-agent: Yandex
+Allow: /
