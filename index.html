@@ -271,144 +271,205 @@
                 {
                     "@type": "Offer",
                     "itemOffered": {
-                        "@type": "Product",
+                        "@type": "Service",
                         "name": "Ertiga Car Rental",
                         "description": "7-seater Ertiga car rental in Ranchi for family trips and outstation travel",
                         "image": "https://rohittravels.com/images/ertiga.jpg",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Maruti Suzuki"
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "Rohit Travels Ranchi"
                         },
                         "aggregateRating": {
                             "@type": "AggregateRating",
                             "ratingValue": "4.8",
                             "reviewCount": "1250"
-                        },
-                        "review": {
-                            "@type": "Review",
-                            "reviewRating": {
-                                "@type": "Rating",
-                                "ratingValue": "5",
-                                "bestRating": "5"
-                            },
-                            "author": {
-                                "@type": "Person",
-                                "name": "Priya Sharma"
-                            },
-                            "reviewBody": "Best 7-seater car for family trips. Very comfortable for long journeys from Ranchi."
-                        },
-                        "offers": {
-                            "@type": "Offer",
-                            "price": "11",
-                            "priceCurrency": "INR",
-                            "priceValidUntil": "2026-12-31",
-                            "priceSpecification": {
-                                "@type": "UnitPriceSpecification",
-                                "price": "11",
-                                "priceCurrency": "INR",
-                                "unitText": "per kilometer"
-                            },
-                            "availability": "https://schema.org/InStock",
-                            "seller": {
-                                "@type": "Organization",
-                                "name": "Rohit Travels Ranchi"
-                            }
                         }
-                    }
+                    },
+                    "price": "11",
+                    "priceCurrency": "INR",
+                    "priceValidUntil": "2026-12-31"
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
-                        "@type": "Product",
+                        "@type": "Service",
                         "name": "Innova Crysta Rental",
                         "description": "Premium Innova Crysta car rental for comfortable long-distance travel",
                         "image": "https://rohittravels.com/images/crista.jpeg",
-                        "brand": {
-                            "@type": "Brand",
-                            "name": "Toyota"
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "Rohit Travels Ranchi"
                         },
                         "aggregateRating": {
                             "@type": "AggregateRating",
                             "ratingValue": "4.9",
                             "reviewCount": "2100"
-                        },
-                        "review": {
-                            "@type": "Review",
-                            "reviewRating": {
-                                "@type": "Rating",
-                                "ratingValue": "5",
-                                "bestRating": "5"
-                            },
-                            "author": {
-                                "@type": "Person",
-                                "name": "Amit Kumar"
-                            },
-                            "reviewBody": "Excellent Innova Crysta for outstation trips. Professional driver and well-maintained vehicle."
-                        },
-                        "offers": {
-                            "@type": "Offer",
-                            "price": "13",
-                            "priceCurrency": "INR",
-                            "priceValidUntil": "2026-12-31",
-                            "priceSpecification": {
-                                "@type": "UnitPriceSpecification",
-                                "price": "13",
-                                "priceCurrency": "INR",
-                                "unitText": "per kilometer"
-                            },
-                            "availability": "https://schema.org/InStock",
-                            "seller": {
-                                "@type": "Organization",
-                                "name": "Rohit Travels Ranchi"
-                            }
                         }
-                    }
+                    },
+                    "price": "13",
+                    "priceCurrency": "INR",
+                    "priceValidUntil": "2026-12-31"
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
-                        "@type": "Product",
+                        "@type": "Service",
                         "name": "Luxury Car Rental",
                         "description": "Audi and BMW luxury car rental for weddings and special occasions",
                         "image": "https://rohittravels.com/images/audi.jpg",
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "Rohit Travels Ranchi"
+                        },
                         "aggregateRating": {
                             "@type": "AggregateRating",
                             "ratingValue": "5.0",
                             "reviewCount": "850"
-                        },
-                        "review": {
-                            "@type": "Review",
-                            "reviewRating": {
-                                "@type": "Rating",
-                                "ratingValue": "5",
-                                "bestRating": "5"
-                            },
-                            "author": {
-                                "@type": "Person",
-                                "name": "Rajesh Verma"
-                            },
-                            "reviewBody": "Perfect luxury car for my wedding. Audi was well-decorated and driver was very professional."
-                        },
-                        "offers": {
-                            "@type": "Offer",
-                            "price": "20",
-                            "priceCurrency": "INR",
-                            "priceValidUntil": "2026-12-31",
-                            "priceSpecification": {
-                                "@type": "UnitPriceSpecification",
-                                "price": "20",
-                                "priceCurrency": "INR",
-                                "unitText": "per kilometer"
-                            },
-                            "availability": "https://schema.org/InStock",
-                            "seller": {
-                                "@type": "Organization",
-                                "name": "Rohit Travels Ranchi"
-                            }
                         }
-                    }
+                    },
+                    "price": "20",
+                    "priceCurrency": "INR",
+                    "priceValidUntil": "2026-12-31"
                 }
             ]
+        }
+    }
+    </script>
+
+    <!-- Individual Product Schema for Better Display -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Ertiga Car Rental Service",
+        "description": "7-seater Maruti Suzuki Ertiga car rental in Ranchi for family trips and outstation travel",
+        "image": "https://rohittravels.com/images/ertiga.jpg",
+        "brand": {
+            "@type": "Brand",
+            "name": "Maruti Suzuki"
+        },
+        "category": "Car Rental Service",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "1250"
+        },
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Priya Sharma"
+            },
+            "reviewBody": "Best 7-seater car for family trips. Very comfortable for long journeys from Ranchi."
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "11",
+            "priceCurrency": "INR",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://rohittravels.com/#cars",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "11",
+                "priceCurrency": "INR",
+                "unitText": "per kilometer"
+            }
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Innova Crysta Rental Service",
+        "description": "Premium Toyota Innova Crysta car rental for comfortable long-distance travel from Ranchi",
+        "image": "https://rohittravels.com/images/crista.jpeg",
+        "brand": {
+            "@type": "Brand",
+            "name": "Toyota"
+        },
+        "category": "Car Rental Service",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "2100"
+        },
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Amit Kumar"
+            },
+            "reviewBody": "Excellent Innova Crysta for outstation trips. Professional driver and well-maintained vehicle."
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "13",
+            "priceCurrency": "INR",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://rohittravels.com/#cars",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "13",
+                "priceCurrency": "INR",
+                "unitText": "per kilometer"
+            }
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Luxury Car Rental Service - Audi & BMW",
+        "description": "Audi and BMW luxury car rental for weddings and special occasions in Ranchi",
+        "image": "https://rohittravels.com/images/audi.jpg",
+        "category": "Luxury Car Rental Service",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "850"
+        },
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Rajesh Verma"
+            },
+            "reviewBody": "Perfect luxury car for my wedding. Audi was well-decorated and driver was very professional."
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "20",
+            "priceCurrency": "INR",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://rohittravels.com/#cars",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "20",
+                "priceCurrency": "INR",
+                "unitText": "per kilometer"
+            }
         }
     }
     </script>
