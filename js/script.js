@@ -218,10 +218,36 @@ window.addEventListener('scroll', setActiveNav);
 let currentSlide = 0;
 const slides = document.querySelectorAll('.testimonial-card');
 const totalSlides = slides.length;
+const indicatorsContainer = document.getElementById('testimonialIndicators');
+
+// Create indicators
+function createIndicators() {
+    if (!indicatorsContainer) return;
+    
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('testimonial-dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            currentSlide = i;
+            updateSlider();
+            resetAutoSlide();
+        });
+        indicatorsContainer.appendChild(dot);
+    }
+}
 
 function updateSlider() {
     if (testimonialTrack) {
         testimonialTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    
+    // Update indicators
+    if (indicatorsContainer) {
+        const dots = indicatorsContainer.querySelectorAll('.testimonial-dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
     }
 }
 
@@ -236,12 +262,23 @@ function prevSlide() {
 }
 
 if (nextBtn && prevBtn) {
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+    });
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+    });
 }
 
-// Auto slide every 5 seconds
-let autoSlide = setInterval(nextSlide, 5000);
+// Auto slide every 3 seconds (3000ms) for better readability
+let autoSlide = setInterval(nextSlide, 3000);
+
+function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(nextSlide, 3000);
+}
 
 // Pause auto slide on hover
 if (testimonialTrack) {
@@ -250,8 +287,13 @@ if (testimonialTrack) {
     });
     
     testimonialTrack.addEventListener('mouseleave', () => {
-        autoSlide = setInterval(nextSlide, 5000);
+        resetAutoSlide();
     });
+}
+
+// Initialize indicators
+if (slides.length > 0) {
+    createIndicators();
 }
 
 // ===== Form Submission with Formspree =====

@@ -1,9 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage - Most Important -->
   <url>
     <loc>https://rohittravels.com/</loc>
-    <lastmod>2026-01-21</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://rohittravels.com/images/hero-bg.jpg</image:loc>
+      <image:title>Best Taxi Service in Ranchi - Rohit Travels</image:title>
+      <image:caption>Premium cab service in Ranchi with Ertiga, Innova, Audi, BMW</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://rohittravels.com/images/ertiga.jpg</image:loc>
+      <image:title>Maruti Ertiga 7-Seater Car Rental in Ranchi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rohittravels.com/images/crista.jpeg</image:loc>
+      <image:title>Toyota Innova Crysta Rental in Ranchi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rohittravels.com/images/audi.jpg</image:loc>
+      <image:title>Audi Luxury Car Rental for Wedding in Ranchi</image:title>
+    </image:image>
   </url>
+  
+  <!-- Service Pages -->
+  <url>
+    <loc>https://rohittravels.com/#services</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://rohittravels.com/#cars</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://rohittravels.com/#about</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://rohittravels.com/#testimonials</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <url>
+    <loc>https://rohittravels.com/#contact</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Popular Routes (Virtual Pages for SEO) -->
+  <url>
+    <loc>https://rohittravels.com/#ranchi-to-jamshedpur</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://rohittravels.com/#ranchi-to-patna</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://rohittravels.com/#ranchi-to-kolkata</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://rohittravels.com/#airport-taxi-ranchi</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  
 </urlset>
+
