@@ -55,6 +55,8 @@ body {
     color: var(--text-color);
     background-color: var(--white);
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Animated Background Pattern */
@@ -87,6 +89,19 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Prevent text selection issues on mobile */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth scrolling for all browsers */
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
 }
 
 .container {
@@ -627,11 +642,19 @@ img {
     }
 }
 
-.hero-text h2 {
-    font-size: 52px;
+.hero-text h1 {
+    font-size: 42px;
     font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text h2 {
+    font-size: 28px;
+    font-weight: 700;
     margin-bottom: 25px;
-    line-height: 1.2;
+    line-height: 1.4;
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -707,6 +730,8 @@ img {
     font-family: inherit;
     transition: var(--transition);
     background: var(--gray-light);
+    /* Prevent zoom on iOS */
+    font-size: 16px;
 }
 
 .form-group input:focus,
@@ -2213,13 +2238,23 @@ img {
     }
 
     .hero-badge {
-        font-size: 12px;
-        padding: 8px 16px;
+        font-size: 11px;
+        padding: 8px 14px;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 15px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .hero-text h2 {
-        font-size: 28px;
-        line-height: 1.3;
+        font-size: 18px;
+        line-height: 1.4;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .hero-text p {
@@ -2544,8 +2579,37 @@ img {
         font-size: 12px;
     }
 
-    .logo h1 {
-        font-size: 18px;
+    .logo h1, .logo-text {
+        font-size: 16px;
+    }
+
+    .logo-img {
+        height: 32px;
+        max-width: 90px;
+    }
+
+    .hero-text h1 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .hero-text h2 {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+        min-height: 44px;
+    }
+
+    .hero-buttons .btn {
+        min-height: 48px;
     }
 
     .footer-logo {
@@ -3632,4 +3696,112 @@ img {
 @keyframes neonPulse {
     0%, 100% { box-shadow: 0 0 5px var(--primary-color); }
     50% { box-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color); }
+}
+
+/* ===== Enhanced Mobile & Desktop Optimization ===== */
+
+/* Better touch targets for all interactive elements */
+@media (max-width: 768px) {
+    a, button, .btn, input[type="submit"], input[type="button"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Improve text readability on mobile */
+    body {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    /* Better container spacing */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Optimize image loading */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Prevent horizontal scroll */
+    * {
+        max-width: 100vw;
+    }
+    
+    /* Better form usability */
+    input, textarea, select {
+        font-size: 16px !important; /* Prevent zoom on iOS */
+    }
+}
+
+/* Desktop optimizations (1920px and above) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-text h1 {
+        font-size: 52px;
+    }
+    
+    .hero-text h2 {
+        font-size: 32px;
+    }
+    
+    .section-header h2 {
+        font-size: 46px;
+    }
+}
+
+/* Tablet landscape optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .hero-text h2 {
+        font-size: 24px;
+    }
+    
+    .hero-content {
+        gap: 30px;
+    }
+}
+
+/* Small phone optimization (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .hero-text h1 {
+        font-size: 22px;
+    }
+    
+    .hero-text h2 {
+        font-size: 16px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+/* Improve accessibility and touch-friendly elements globally */
+*, *::before, *::after {
+    -webkit-tap-highlight-color: rgba(102, 126, 234, 0.1);
+}
+
+/* Better focus states for keyboard navigation */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Smooth font rendering across all devices */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
