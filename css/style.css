@@ -1859,6 +1859,31 @@ img {
     margin-bottom: 50px;
 }
 
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-logo-img {
+    height: 42px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.footer-logo h3 {
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-logo h3::after {
+    display: none;
+}
+
 .footer-col h3 {
     font-size: 22px;
     margin-bottom: 30px;
@@ -2520,6 +2545,21 @@ img {
     }
 
     .logo h1 {
+        font-size: 18px;
+    }
+
+    .footer-logo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .footer-logo-img {
+        height: 35px;
+        max-width: 120px;
+    }
+
+    .footer-logo h3 {
         font-size: 18px;
     }
 
