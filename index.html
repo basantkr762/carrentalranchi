@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- Favicon & App Icons -->
@@ -12,11 +12,20 @@
     <meta name="theme-color" content="#11998e">
     <meta name="msapplication-TileColor" content="#11998e">
     
+    <!-- Performance & SEO Hints -->
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
     <!-- DNS Prefetch & Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="images/rohittravelslogo.webp" as="image" fetchpriority="high">
     
     <!-- Primary SEO Meta Tags -->
     <title>Cabs in Ranchi | Taxi Service in Ranchi @ ₹9/km | Ranchi Cab Taxi | Rohit Travels</title>
@@ -1064,18 +1073,58 @@
     }
     </script>
 
-    <!-- Stylesheets -->
+    <!-- Inline Critical CSS for Fast Initial Render -->
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;overflow-x:hidden;background:#fff}
+        .header{background:rgba(255,255,255,0.95);box-shadow:0 4px 15px rgba(0,0,0,0.1);position:sticky;top:0;z-index:1000}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        .navbar{display:flex;justify-content:space-between;align-items:center;padding:15px 0}
+        .logo-img{height:50px;width:auto;max-width:200px}
+        .hero{min-height:600px;position:relative;display:flex;align-items:center;background:#667eea}
+        .hero-content{position:relative;z-index:2;color:#fff}
+        .btn{display:inline-block;padding:14px 35px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50px;text-decoration:none}
+        /* Performance optimization for off-screen content */
+        .services,.cars,.testimonials,.contact,.footer{content-visibility:auto;contain-intrinsic-size:auto 500px}
+        @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+    </style>
+
+    <!-- Critical Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Google Analytics & Tag Manager -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-131ZG1J0NF"></script>
+    <!-- Defer Non-Critical CSS -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Google Analytics & Tag Manager (Optimized Loading) -->
     <script>
+        // Delay analytics until page interaction or 3 seconds
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-131ZG1J0NF');
+        
+        function loadGoogleAnalytics() {
+            if (window.gtag_loaded) return;
+            window.gtag_loaded = true;
+            
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-131ZG1J0NF';
+            document.head.appendChild(script);
+            
+            script.onload = function() {
+                gtag('js', new Date());
+                gtag('config', 'G-131ZG1J0NF');
+            };
+        }
+        
+        // Load on interaction
+        ['scroll', 'click', 'mousemove', 'touchstart'].forEach(function(event) {
+            window.addEventListener(event, loadGoogleAnalytics, {once: true, passive: true});
+        });
+        
+        // Fallback: load after 3 seconds
+        setTimeout(loadGoogleAnalytics, 3000);
     </script>
     
     <!-- Google Tag Manager -->
@@ -1113,7 +1162,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/rohittravelslogo.webp" alt="Rohit Travels Ranchi - Best Taxi Service" class="logo-img" width="180" height="50">
+                        <img src="images/rohittravelslogo.webp" alt="Rohit Travels Ranchi - Best Taxi Service" class="logo-img" width="180" height="50" fetchpriority="high">
                         <span class="logo-text">Rohit Travels</span>
                     </a>
                 </div>
@@ -2171,6 +2220,38 @@
         <i class="fas fa-phone"></i>
     </a>
 
-    <script src="js/script.js"></script>
+    <!-- Performance Optimization Script -->
+    <script>
+        // Add loading="lazy" and decoding="async" to external images
+        document.addEventListener('DOMContentLoaded', function() {
+            var externalImages = document.querySelectorAll('img[src*="ui-avatars.com"], img[src*="google.com"]');
+            externalImages.forEach(function(img) {
+                if (!img.hasAttribute('loading')) {
+                    img.setAttribute('loading', 'lazy');
+                }
+                if (!img.hasAttribute('decoding')) {
+                    img.setAttribute('decoding', 'async');
+                }
+            });
+            
+            // Add decoding="async" to all images
+            var allImages = document.querySelectorAll('img');
+            allImages.forEach(function(img) {
+                if (!img.hasAttribute('decoding')) {
+                    img.setAttribute('decoding', 'async');
+                }
+            });
+        });
+        
+        // Optimize iframe loading (if any are added later)
+        if ('loading' in HTMLIFrameElement.prototype) {
+            var iframes = document.querySelectorAll('iframe');
+            iframes.forEach(function(iframe) {
+                iframe.loading = 'lazy';
+            });
+        }
+    </script>
+
+    <script src="js/script.js" defer></script>
 </body>
 </html>
