@@ -9,8 +9,6 @@ const nextBtn = document.getElementById('nextBtn');
 // Hero Slider Elements
 const heroSlides = document.querySelectorAll('.hero-slide');
 const sliderDots = document.querySelectorAll('.slider-dots .dot');
-const sliderPrev = document.querySelector('.slider-prev');
-const sliderNext = document.querySelector('.slider-next');
 let currentHeroSlide = 0;
 let heroSlideInterval;
 
@@ -126,7 +124,7 @@ function prevHeroSlide() {
 function startHeroAutoSlide() {
     heroSlideInterval = setInterval(() => {
         nextHeroSlide();
-    }, 2000); // Change slide every 2 seconds
+    }, 5000); // Change slide every 5 seconds
 }
 
 function resetHeroAutoSlide() {
@@ -135,7 +133,7 @@ function resetHeroAutoSlide() {
 }
 
 // ===== Mobile Navigation Toggle =====
-if (navToggle) {
+if (navToggle && navMenu) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
@@ -155,17 +153,19 @@ if (navToggle) {
 }
 
 // Close menu when clicking on a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        navToggle.classList.remove('active');
-        const spans = navToggle.querySelectorAll('span');
-        spans.forEach(span => {
-            span.style.transform = 'none';
-            span.style.opacity = '1';
+if (navMenu && navToggle) {
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+            const spans = navToggle.querySelectorAll('span');
+            spans.forEach(span => {
+                span.style.transform = 'none';
+                span.style.opacity = '1';
+            });
         });
     });
-});
+}
 
 // ===== Sticky Header with Scroll Effect =====
 let lastScroll = 0;
@@ -175,17 +175,19 @@ window.addEventListener('scroll', () => {
         requestAnimationFrame(() => {
             const currentScroll = window.pageYOffset;
             
-            if (currentScroll > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-            
-            // Hide/Show header on scroll using CSS classes (not transform to avoid breaking position:fixed elements)
-            if (currentScroll > lastScroll && currentScroll > 500) {
-                header.classList.add('header-hidden');
-            } else {
-                header.classList.remove('header-hidden');
+            if (header) {
+                if (currentScroll > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                // Hide/Show header on scroll using CSS classes
+                if (currentScroll > lastScroll && currentScroll > 500) {
+                    header.classList.add('header-hidden');
+                } else {
+                    header.classList.remove('header-hidden');
+                }
             }
             
             lastScroll = currentScroll;
@@ -278,12 +280,13 @@ if (nextBtn && prevBtn) {
     });
 }
 
-// Auto slide every 3 seconds (3000ms) for better readability
-let autoSlide = setInterval(nextSlide, 3000);
+// Auto slide every 4 seconds — gated so NaN never enters currentSlide if no slides exist
+let autoSlide = totalSlides > 0 ? setInterval(nextSlide, 4000) : null;
 
 function resetAutoSlide() {
+    if (!totalSlides) return;
     clearInterval(autoSlide);
-    autoSlide = setInterval(nextSlide, 3000);
+    autoSlide = setInterval(nextSlide, 4000);
 }
 
 // Pause auto slide on hover
@@ -647,22 +650,6 @@ document.querySelectorAll('.btn').forEach(btn => {
     });
 });
 
-// ===== Typing Effect for Hero Title =====
-function typeWriter(element, text, speed = 50) {
-    let i = 0;
-    element.textContent = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
-
 // ===== Smooth Reveal for Section Headers =====
 const sectionHeaders = document.querySelectorAll('.section-header');
 const headerObserver = new IntersectionObserver((entries) => {
@@ -764,17 +751,7 @@ if (!isTouchDevice) {
 // ===== Initialize on DOM Load =====
 document.addEventListener('DOMContentLoaded', () => {
     lazyLoadImages();
-    
-    // Add loading screen
-    const loading = document.createElement('div');
-    loading.className = 'loading';
-    loading.innerHTML = '<div class="loading-spinner"></div>';
-    document.body.prepend(loading);
-    
-    // Remove loading after page load
-    window.addEventListener('load', () => {
-        setTimeout(() => loading.classList.add('hidden'), 300);
-    });
+    // Note: loading spinner is already in the HTML — do not create a second one here
 });
 
 // ===== Cursor Glow Effect (desktop only) =====
