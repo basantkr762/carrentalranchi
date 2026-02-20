@@ -174,16 +174,15 @@ window.addEventListener('scroll', () => {
     
     if (currentScroll > 100) {
         header.classList.add('scrolled');
-        header.style.transform = 'translateY(0)';
     } else {
         header.classList.remove('scrolled');
     }
     
-    // Hide/Show header on scroll
+    // Hide/Show header on scroll using CSS classes (not transform to avoid breaking position:fixed elements)
     if (currentScroll > lastScroll && currentScroll > 500) {
-        header.style.transform = 'translateY(-100%)';
+        header.classList.add('header-hidden');
     } else {
-        header.style.transform = 'translateY(0)';
+        header.classList.remove('header-hidden');
     }
     
     lastScroll = currentScroll;
