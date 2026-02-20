@@ -1896,7 +1896,7 @@ html {
     width: auto;
     max-width: 150px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    /* filter: brightness(0) invert(1); */ /* Removed - was making logo invisible */
 }
 
 .footer-logo h3 {
