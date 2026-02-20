@@ -1,6 +1,6 @@
 // Service Worker for Rohit Travels - Cache Strategy
 // Version: bump this string to force cache refresh
-const CACHE_NAME = 'rohit-travels-v1';
+const CACHE_NAME = 'rohit-travels-v2';
 
 const STATIC_ASSETS = [
     '/',
