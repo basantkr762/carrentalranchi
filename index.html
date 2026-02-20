@@ -1127,17 +1127,9 @@
         setTimeout(loadGoogleAnalytics, 3000);
     </script>
     
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <!-- Google Tag Manager (Removed placeholder to prevent 404 errors) -->
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
@@ -1162,7 +1154,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/rohittravelslogo.webp" alt="Rohit Travels Ranchi - Best Taxi Service" class="logo-img" width="180" height="50" fetchpriority="high">
+                        <img src="images/rohittravelslogo.webp" alt="Rohit Travels Ranchi - Best Taxi Service" class="logo-img" width="180" height="50" fetchpriority="high" decoding="async">
                         <span class="logo-text">Rohit Travels</span>
                     </a>
                 </div>
@@ -1242,7 +1234,8 @@
                             <input type="text" name="entry.929679028" placeholder="Drop Location" required>
                         </div>
                         <div class="form-group">
-                            <input type="date" name="entry.1937996992" required>
+                            <label for="bookingDate" style="position:absolute;left:-9999px;">Pickup Date</label>
+                            <input type="date" id="bookingDate" name="entry.1937996992" placeholder="Pickup Date" required>
                         </div>
                         <div class="form-group">
                             <textarea name="entry.488826511" placeholder="Message" rows="3"></textarea>
@@ -1484,7 +1477,7 @@
                 <p style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;">
                     <span style="color: #FBBC04; font-size: 24px;">⭐⭐⭐⭐⭐</span>
                     <span style="font-size: 20px; font-weight: bold; color: #333;">5.0 Rating on Google</span>
-                    <a href="https://g.page/r/CVBkXds9TskTEBM" target="_blank" style="color: #4285F4; text-decoration: underline; font-size: 14px;">View All Reviews</a>
+                    <a href="https://g.page/r/CVBkXds9TskTEBM" target="_blank" style="color: #1a73e8; text-decoration: underline; font-size: 14px;">View All Reviews</a>
                 </p>
             </div>
             <div class="testimonial-slider">
@@ -1630,8 +1623,8 @@
                     </div>
                 </div>
                 <div class="testimonial-nav">
-                    <button class="prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-                    <button class="next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                    <button class="prev-btn" id="prevBtn" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next-btn" id="nextBtn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
                 </div>
                 <div class="testimonial-indicators" id="testimonialIndicators"></div>
             </div>
@@ -2211,12 +2204,12 @@
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/917903629240" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/917903629240" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp" rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Call Float Button -->
-    <a href="tel:+917903629240" class="call-float">
+    <a href="tel:+917903629240" class="call-float" aria-label="Call us now">
         <i class="fas fa-phone"></i>
     </a>
 
