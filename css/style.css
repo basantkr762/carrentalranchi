@@ -340,6 +340,12 @@ html {
     text-decoration: none;
 }
 
+.logo-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
 .logo-img {
     height: 50px;
     width: auto;
@@ -361,6 +367,18 @@ html {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     white-space: nowrap;
+    line-height: 1.2;
+}
+
+.logo-tagline {
+    font-size: 11px;
+    font-weight: 600;
+    color: #666;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: -2px;
 }
 
 .nav-menu {
@@ -2200,6 +2218,11 @@ html {
         font-size: 20px;
     }
 
+    .logo-tagline {
+        font-size: 9px;
+        letter-spacing: 0.2px;
+    }
+
     .logo-img {
         height: 40px;
         max-width: 40px;
@@ -2595,6 +2618,11 @@ html {
 
     .logo h1, .logo-text {
         font-size: 16px;
+    }
+
+    .logo-tagline {
+        font-size: 8px;
+        letter-spacing: 0.1px;
     }
 
     .logo-img {
