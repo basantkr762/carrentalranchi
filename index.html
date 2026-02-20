@@ -1327,6 +1327,9 @@
 
     <!-- Main Content -->
     <main id="main-content">
+    <!-- LCP hint: invisible img helps browser pipeline the hero background early -->
+    <img src="images/hero-bg.webp" alt="" width="1" height="1" fetchpriority="high"
+         style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;" aria-hidden="true">
     <!-- Hero Section with Slider -->
     <section class="hero" id="home">
         <!-- Hero Slider Background -->
@@ -1664,7 +1667,7 @@
                 </table>
             </div>
             <div style="margin-top: 25px; background: #f8fff8; border: 1px solid #c3e6cb; border-radius: 10px; padding: 20px 25px;">
-                <h4 style="color: #0a6b61; margin-bottom: 10px;">📌 Important Notes on Cab Fare in Ranchi:</h4>
+                <h3 style="color: #0a6b61; margin-bottom: 10px;">📌 Important Notes on Cab Fare in Ranchi:</h3>
                 <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 8px;">
                     <li style="color: #555; font-size: 14px; padding: 5px 0;">✅ All fares are inclusive of driver charges</li>
                     <li style="color: #555; font-size: 14px; padding: 5px 0;">✅ No surge pricing — same rate 24/7, 365 days</li>

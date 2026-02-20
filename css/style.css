@@ -2082,7 +2082,8 @@ html {
     text-decoration: none;
     animation: floatPulseGreen 2s ease-in-out infinite;
     transform: translate(var(--mag-x, 0px), var(--mag-y, 0px)) scale(var(--mag-scale, 1));
-    transition: box-shadow 0.3s ease;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    will-change: filter, transform;
 }
 
 .call-float {
@@ -2103,17 +2104,18 @@ html {
     text-decoration: none;
     animation: floatPulseRed 2s ease-in-out infinite 0.5s;
     transform: translate(var(--mag-x, 0px), var(--mag-y, 0px)) scale(var(--mag-scale, 1));
-    transition: box-shadow 0.3s ease;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    will-change: filter, transform;
 }
 
 @keyframes floatPulseGreen {
-    0%, 100% { box-shadow: 0 10px 30px rgba(17, 153, 142, 0.4); }
-    50% { box-shadow: 0 15px 45px rgba(17, 153, 142, 0.65), 0 0 0 8px rgba(17, 153, 142, 0.1); }
+    0%, 100% { filter: drop-shadow(0 8px 20px rgba(17, 153, 142, 0.45)); }
+    50% { filter: drop-shadow(0 12px 35px rgba(17, 153, 142, 0.7)); }
 }
 
 @keyframes floatPulseRed {
-    0%, 100% { box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4); }
-    50% { box-shadow: 0 15px 45px rgba(245, 87, 108, 0.65), 0 0 0 8px rgba(245, 87, 108, 0.1); }
+    0%, 100% { filter: drop-shadow(0 8px 20px rgba(245, 87, 108, 0.45)); }
+    50% { filter: drop-shadow(0 12px 35px rgba(245, 87, 108, 0.7)); }
 }
 
 .whatsapp-float:hover,
@@ -3690,12 +3692,12 @@ html {
 }
 
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0% 0 0); }
 }
 
 @keyframes blink {
-    50% { border-color: transparent; }
+    50% { opacity: 0; }
 }
 
 /* ===== Glow Effect ===== */
@@ -3704,12 +3706,8 @@ html {
 }
 
 @keyframes glow {
-    from {
-        box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
-    }
-    to {
-        box-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color), 0 0 40px var(--primary-color);
-    }
+    from { opacity: 0.7; }
+    to { opacity: 1; }
 }
 
 /* ===== Gradient Text Animation ===== */
@@ -3771,8 +3769,8 @@ html {
 }
 
 @keyframes neonPulse {
-    0%, 100% { box-shadow: 0 0 5px var(--primary-color); }
-    50% { box-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color); }
+    0%, 100% { transform: scale(1); opacity: 0.95; }
+    50% { transform: scale(1.02); opacity: 1; }
 }
 
 /* ===== Enhanced Mobile & Desktop Optimization ===== */

@@ -494,28 +494,6 @@ function animateCounter(element, target, duration = 2000) {
     updateCounter();
 }
 
-// ===== Parallax Effect =====
-function parallaxEffect() {
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const scrolled = window.pageYOffset;
-        hero.style.backgroundPositionY = `${scrolled * 0.5}px`;
-    }
-}
-
-window.addEventListener('scroll', parallaxEffect);
-
-// ===== Mouse Trail Effect on Hero =====
-const hero = document.querySelector('.hero');
-if (hero) {
-    hero.addEventListener('mousemove', (e) => {
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
-        
-        hero.style.backgroundPosition = `${x * 20}% ${y * 20}%`;
-    });
-}
-
 // ===== Tilt Effect on Cards =====
 const cards = document.querySelectorAll('.service-card, .car-card');
 cards.forEach(card => {
