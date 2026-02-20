@@ -303,6 +303,21 @@ img {
     background-clip: text;
 }
 
+/* Logo Image Styling */
+.logo-img {
+    height: 50px;
+    width: auto;
+    max-width: 200px;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
 .nav-menu {
     display: flex;
     gap: 10px;
