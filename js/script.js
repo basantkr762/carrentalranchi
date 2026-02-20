@@ -169,23 +169,30 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 
 // ===== Sticky Header with Scroll Effect =====
 let lastScroll = 0;
+let scrollTicking = false;
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+    if (!scrollTicking) {
+        requestAnimationFrame(() => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Hide/Show header on scroll using CSS classes (not transform to avoid breaking position:fixed elements)
+            if (currentScroll > lastScroll && currentScroll > 500) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            
+            lastScroll = currentScroll;
+            scrollTicking = false;
+        });
+        scrollTicking = true;
     }
-    
-    // Hide/Show header on scroll using CSS classes (not transform to avoid breaking position:fixed elements)
-    if (currentScroll > lastScroll && currentScroll > 500) {
-        header.classList.add('header-hidden');
-    } else {
-        header.classList.remove('header-hidden');
-    }
-    
-    lastScroll = currentScroll;
 });
 
 // ===== Active Navigation Link =====
@@ -211,7 +218,7 @@ function setActiveNav() {
     });
 }
 
-window.addEventListener('scroll', setActiveNav);
+window.addEventListener('scroll', setActiveNav, { passive: true });
 
 // ===== Testimonial Slider =====
 let currentSlide = 0;
@@ -725,21 +732,34 @@ document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
     });
 });
 
-// ===== Magnetic Effect on Floating Buttons =====
+// ===== Magnetic Effect on Floating Buttons (desktop only) =====
+// Uses CSS custom properties to avoid conflicting with the bounce animation transform
 const floatingButtons = document.querySelectorAll('.whatsapp-float, .call-float');
-floatingButtons.forEach(btn => {
-    btn.addEventListener('mousemove', (e) => {
-        const rect = btn.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
+const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
+if (!isTouchDevice) {
+    floatingButtons.forEach(btn => {
+        let rafId;
+        btn.addEventListener('mousemove', (e) => {
+            cancelAnimationFrame(rafId);
+            rafId = requestAnimationFrame(() => {
+                const rect = btn.getBoundingClientRect();
+                const x = (e.clientX - rect.left - rect.width / 2) * 0.25;
+                const y = (e.clientY - rect.top - rect.height / 2) * 0.25;
+                btn.style.setProperty('--mag-x', `${x}px`);
+                btn.style.setProperty('--mag-y', `${y}px`);
+                btn.style.setProperty('--mag-scale', '1.12');
+            });
+        }, { passive: true });
         
-        btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.15)`;
+        btn.addEventListener('mouseleave', () => {
+            cancelAnimationFrame(rafId);
+            btn.style.setProperty('--mag-x', '0px');
+            btn.style.setProperty('--mag-y', '0px');
+            btn.style.setProperty('--mag-scale', '1');
+        });
     });
-    
-    btn.addEventListener('mouseleave', () => {
-        btn.style.transform = '';
-    });
-});
+}
 
 // ===== Initialize on DOM Load =====
 document.addEventListener('DOMContentLoaded', () => {
@@ -757,25 +777,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ===== Cursor Glow Effect =====
-const cursorGlow = document.createElement('div');
-cursorGlow.style.cssText = `
-    position: fixed;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: -1;
-    transition: transform 0.1s ease;
-    transform: translate(-50%, -50%);
-`;
-document.body.appendChild(cursorGlow);
-
-document.addEventListener('mousemove', (e) => {
-    cursorGlow.style.left = e.clientX + 'px';
-    cursorGlow.style.top = e.clientY + 'px';
-});
+// ===== Cursor Glow Effect (desktop only) =====
+if (!window.matchMedia('(hover: none)').matches) {
+    const cursorGlow = document.createElement('div');
+    cursorGlow.style.cssText = `
+        position: fixed;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        will-change: transform;
+        top: 0;
+        left: 0;
+    `;
+    document.body.appendChild(cursorGlow);
+    
+    let cursorTicking = false;
+    document.addEventListener('mousemove', (e) => {
+        if (!cursorTicking) {
+            requestAnimationFrame(() => {
+                cursorGlow.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
+                cursorTicking = false;
+            });
+            cursorTicking = true;
+        }
+    }, { passive: true });
+}
 
 console.log('%c🚗 Rohit travels', 'font-size: 24px; font-weight: bold; color: #667eea; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);');
 console.log('%cWebsite Loaded Successfully!', 'font-size: 14px; color: #38ef7d;');
