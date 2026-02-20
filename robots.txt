@@ -4,6 +4,10 @@ Disallow: /cgi-bin/
 Disallow: /admin/
 Disallow: /*.json$
 Disallow: /private/
+Disallow: /*.md$
+Disallow: /*.ps1$
+Disallow: /CHECK-DEPLOYMENT.ps1
+Disallow: /DEPLOY.ps1
 
 # Sitemap
 Sitemap: https://rohittravels.com/sitemap.xml
@@ -15,6 +19,8 @@ Crawl-delay: 0
 User-agent: Googlebot
 Allow: /
 Disallow: /cgi-bin/
+Disallow: /*.md$
+Disallow: /*.ps1$
 Crawl-delay: 0
 
 # Google Image Bot
