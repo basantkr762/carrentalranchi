@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- Favicon & App Icons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/webp" href="/images/rohittravelslogo.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/rohittravelslogo.webp">
+    <link rel="shortcut icon" href="/images/rohittravelslogo.webp">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#11998e">
     <meta name="msapplication-TileColor" content="#11998e">
@@ -25,7 +26,8 @@
     <!-- Preload Critical Resources -->
     <link rel="preload" href="css/style.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" as="style">
-    <link rel="preload" href="images/rohittravelslogo.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="images/rohittravelslogo_desktop.webp" as="image" fetchpriority="high" media="(min-width: 769px)">
+    <link rel="preload" href="images/rohittravelslogo_mobile.webp" as="image" fetchpriority="high" media="(max-width: 768px)">
     
     <!-- Primary SEO Meta Tags -->
     <title>Cabs in Ranchi | Taxi Service in Ranchi @ ₹9/km | Ranchi Cab Taxi | Rohit Travels</title>
@@ -53,12 +55,12 @@
     <meta property="og:url" content="https://rohittravels.com/">
     <meta property="og:title" content="⭐ Cabs in Ranchi | Taxi Service in Ranchi @ ₹9/km | 5.0 Rating">
     <meta property="og:description" content="🚗 Best Cabs in Ranchi & Taxi Service in Ranchi | Ranchi Cab, Ranchi Taxi | Airport Taxi 24/7 | Outstation Cabs | Wedding Cars @ ₹9/km | Call: +91-7903629240">
-    <meta property="og:image" content="https://rohittravels.com/images/rohittravelslogo.webp">
+    <meta property="og:image" content="https://rohittravels.com/images/rohittravelslogo_desktop.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="en_IN">
     <meta property="og:site_name" content="Rohit Travels Ranchi">
-    <meta property="og:logo" content="https://rohittravels.com/images/rohittravelslogo.webp">
+    <meta property="og:logo" content="https://rohittravels.com/images/rohittravelslogo_desktop.webp">
     <meta property="fb:app_id" content="">
     
     <!-- Twitter -->
@@ -66,7 +68,7 @@
     <meta name="twitter:url" content="https://rohittravels.com/">
     <meta name="twitter:title" content="Cabs in Ranchi | Taxi in Ranchi | Ranchi Cab Taxi @ ₹9/km">
     <meta name="twitter:description" content="✅ Best Cabs in Ranchi & Taxi Service in Ranchi. Ranchi Cab, Ranchi Taxi @ ₹9/km. Airport Taxi 24/7. Call +91 7903629240!">
-    <meta name="twitter:image" content="https://rohittravels.com/images/rohittravelslogo.webp">
+    <meta name="twitter:image" content="https://rohittravels.com/images/rohittravelslogo_desktop.webp">
     
     <!-- Geo Tags for Local SEO -->
     <meta name="geo.region" content="IN-JH">
@@ -288,8 +290,8 @@
         "name": "Rohit Travels Ranchi",
         "alternateName": ["Rohit Travels", "rohittravels.com"],
         "url": "https://rohittravels.com",
-        "logo": "https://rohittravels.com/images/rohittravelslogo.webp",
-        "image": "https://rohittravels.com/images/rohittravelslogo.webp",
+        "logo": "https://rohittravels.com/images/rohittravelslogo_desktop.webp",
+        "image": "https://rohittravels.com/images/rohittravelslogo_desktop.webp",
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+91-7903629240",
@@ -311,11 +313,38 @@
         "name": "Rohit Travels Ranchi",
         "alternateName": "rohittravels.com",
         "url": "https://rohittravels.com",
+        "logo": "https://rohittravels.com/images/rohittravelslogo_desktop.webp",
+        "image": "https://rohittravels.com/images/rohittravelslogo_desktop.webp",
         "potentialAction": {
             "@type": "SearchAction",
             "target": "https://rohittravels.com/?s={search_term_string}",
             "query-input": "required name=search_term_string"
         }
+    }
+    </script>
+
+    <!-- ImageObject Schema for Logo (helps Google display logo in search results) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "@id": "https://rohittravels.com/#logo",
+        "url": "https://rohittravels.com/images/rohittravelslogo_desktop.webp",
+        "contentUrl": "https://rohittravels.com/images/rohittravelslogo_desktop.webp",
+        "width": "930",
+        "height": "848",
+        "caption": "Rohit Travels Ranchi - Best Taxi and Cab Service in Ranchi",
+        "name": "Rohit Travels Logo",
+        "description": "Official logo of Rohit Travels Ranchi, the premier taxi and cab service provider in Ranchi, Jharkhand",
+        "creator": {
+            "@type": "Organization",
+            "name": "Rohit Travels Ranchi"
+        },
+        "creditText": "Rohit Travels Ranchi",
+        "copyrightNotice": "© 2026 Rohit Travels Ranchi. All rights reserved.",
+        "license": "https://rohittravels.com",
+        "acquireLicensePage": "https://rohittravels.com",
+        "keywords": "rohit travels logo, ranchi taxi logo, cab service logo"
     }
     </script>
 
@@ -484,8 +513,8 @@
         "alternateName": ["Ranchi Cab Service", "Taxi in Ranchi", "Cabs in Ranchi", "Ranchi Taxi", "Ranchi Cab"],
         "description": "Best taxi service in Ranchi, cab service in Ranchi. Book cabs in Ranchi, Ranchi taxi, Ranchi cab for airport, outstation, local trips at ₹9/km. 24/7 taxi service available.",
         "url": "https://rohittravels.com",
-        "logo": "https://rohittravels.com/images/rohittravelslogo.webp",
-        "image": "https://rohittravels.com/images/rohittravelslogo.webp",
+        "logo": "https://rohittravels.com/images/rohittravelslogo_desktop.webp",
+        "image": "https://rohittravels.com/images/rohittravelslogo_desktop.webp",
         "telephone": "+91-7903629240",
         "email": "rohittravels10@gmail.com",
         "address": {
@@ -542,7 +571,7 @@
                 "postalCode": "834003",
                 "addressCountry": "IN"
             },
-            "image": "https://rohittravels.com/images/rohittravelslogo.webp"
+            "image": "https://rohittravels.com/images/rohittravelslogo_desktop.webp"
         },
         "areaServed": {
             "@type": "City",
@@ -582,7 +611,7 @@
                 "postalCode": "834003",
                 "addressCountry": "IN"
             },
-            "image": "https://rohittravels.com/images/rohittravelslogo.webp"
+            "image": "https://rohittravels.com/images/rohittravelslogo_desktop.webp"
         },
         "areaServed": [
             {"@type": "City", "name": "Ranchi"},
@@ -626,7 +655,7 @@
                 "postalCode": "834003",
                 "addressCountry": "IN"
             },
-            "image": "https://rohittravels.com/images/rohittravelslogo.webp"
+            "image": "https://rohittravels.com/images/rohittravelslogo_desktop.webp"
         },
         "areaServed": {
             "@type": "City",
@@ -662,7 +691,7 @@
                 "postalCode": "834003",
                 "addressCountry": "IN"
             },
-            "image": "https://rohittravels.com/images/rohittravelslogo.webp"
+            "image": "https://rohittravels.com/images/rohittravelslogo_desktop.webp"
         },
         "areaServed": {
             "@type": "City",
@@ -1047,8 +1076,8 @@
         "@id": "https://rohittravels.com/#place",
         "name": "Rohit Travels Ranchi",
         "url": "https://rohittravels.com",
-        "logo": "https://rohittravels.com/images/rohittravelslogo.webp",
-        "image": "https://rohittravels.com/images/rohittravelslogo.webp",
+        "logo": "https://rohittravels.com/images/rohittravelslogo_desktop.webp",
+        "image": "https://rohittravels.com/images/rohittravelslogo_desktop.webp",
         "telephone": "+91-7903629240",
         "address": {
             "@type": "PostalAddress",
@@ -1154,7 +1183,16 @@
             <nav class="navbar">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/rohittravelslogo.webp" alt="Rohit Travels Ranchi - Best Taxi Service" class="logo-img" width="180" height="50" fetchpriority="high" decoding="async">
+                        <img src="images/rohittravelslogo_desktop.webp" 
+                             srcset="images/rohittravelslogo_mobile.webp 480w, 
+                                     images/rohittravelslogo_desktop.webp 960w" 
+                             sizes="(max-width: 768px) 120px, 180px" 
+                             alt="Rohit Travels Ranchi - Best Taxi Service" 
+                             class="logo-img" 
+                             width="180" 
+                             height="50" 
+                             fetchpriority="high" 
+                             decoding="async">
                         <span class="logo-text">Rohit Travels</span>
                     </a>
                 </div>
@@ -2150,7 +2188,15 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="images/rohittravelslogo.webp" alt="Rohit Travels Ranchi Logo" class="footer-logo-img" width="150" height="42">
+                        <img src="images/rohittravelslogo_desktop.webp" 
+                             srcset="images/rohittravelslogo_mobile.webp 480w, 
+                                     images/rohittravelslogo_desktop.webp 960w" 
+                             sizes="(max-width: 768px) 100px, 150px" 
+                             alt="Rohit Travels Ranchi Logo" 
+                             class="footer-logo-img" 
+                             width="150" 
+                             height="42" 
+                             loading="lazy">
                         <h3>Rohit Travels Ranchi</h3>
                     </div>
                     <p>Top car rental service in Ranchi, Jharkhand with more than 10 years of work experience. Customer's comfort is our first priority. Book cabs for local trips, outstation travel, airport transfers, and wedding bookings.</p>
