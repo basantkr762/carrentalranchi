@@ -304,11 +304,17 @@ img {
 }
 
 /* Logo Image Styling */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
 .logo-img {
     height: 50px;
     width: auto;
     max-width: 200px;
-    display: block;
     object-fit: contain;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
@@ -316,6 +322,16 @@ img {
 .logo-img:hover {
     transform: scale(1.05);
     filter: brightness(1.1);
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    white-space: nowrap;
 }
 
 .nav-menu {
@@ -2116,8 +2132,13 @@ img {
         padding: 12px 0;
     }
 
-    .logo h1 {
+    .logo h1, .logo-text {
         font-size: 20px;
+    }
+
+    .logo-img {
+        height: 40px;
+        max-width: 40px;
     }
 
     .nav-menu {
