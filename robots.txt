@@ -13,6 +13,7 @@ Crawl-delay: 0
 # Google Bot (Priority Crawler)
 User-agent: Googlebot
 Allow: /
+Allow: /routes/
 Disallow: /cgi-bin/
 Crawl-delay: 0
 
@@ -51,15 +52,11 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-# Block Bad Bots
+# Allow SEO Bots (helps with backlink discovery)
 User-agent: AhrefsBot
-Disallow: /
+Allow: /
+Crawl-delay: 10
 
 User-agent: SemrushBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
+Allow: /
+Crawl-delay: 10

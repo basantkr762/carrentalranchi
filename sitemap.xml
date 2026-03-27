@@ -2,54 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <!-- Homepage - Single Page Application -->
+  <!-- Homepage -->
   <url>
     <loc>https://rohittravels.com/</loc>
-    <lastmod>2026-02-20</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    
-    <!-- Car Images -->
     <image:image>
       <image:loc>https://rohittravels.com/images/rohittravelslogo_desktop.webp</image:loc>
       <image:title>Rohit Travels Ranchi Logo - Best Taxi Service</image:title>
-      <image:caption>Rohit Travels - Premium Cab Service in Ranchi</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://rohittravels.com/images/ertiga.webp</image:loc>
-      <image:title>Maruti Ertiga 7-Seater Car Rental in Ranchi</image:title>
-      <image:caption>Book Ertiga for family trips and outstation tours from Ranchi</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://rohittravels.com/images/crista.webp</image:loc>
-      <image:title>Toyota Innova Crysta Luxury Car Rental Ranchi</image:title>
-      <image:caption>Premium 7-seater Innova Crysta for outstation and wedding bookings</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://rohittravels.com/images/audi.webp</image:loc>
-      <image:title>Audi Luxury Car Rental for Wedding in Ranchi</image:title>
-      <image:caption>Book Audi for wedding and special occasions in Ranchi</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://rohittravels.com/images/bmw.webp</image:loc>
-      <image:title>BMW Premium Car Rental Ranchi</image:title>
-      <image:caption>Luxury BMW rental for corporate events and weddings in Ranchi</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://rohittravels.com/images/dezire.webp</image:loc>
-      <image:title>Maruti Dzire Sedan Rental Ranchi</image:title>
-      <image:caption>Affordable sedan taxi service in Ranchi - starting ₹9/km</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://rohittravels.com/images/aura.webp</image:loc>
-      <image:title>Hyundai Aura Sedan Car Rental Ranchi</image:title>
-      <image:caption>Comfortable Aura sedan for local and outstation trips</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://rohittravels.com/images/luxury-car.webp</image:loc>
-      <image:title>Luxury Car Rental Service in Ranchi</image:title>
-      <image:caption>Premium luxury cars for weddings, corporate events, and special occasions</image:caption>
-    </image:image>
+  </url>
+  
+  <!-- Route Pages -->
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-jamshedpur-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-patna-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-kolkata-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-bokaro-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-dhanbad-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-varanasi-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-gaya-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-netarhat-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-deoghar-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-hazaribag-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-giridih-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-daltonganj-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-puri-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohittravels.com/routes/ranchi-to-rourkela-cab.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   
 </urlset>
