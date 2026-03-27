@@ -7,15 +7,11 @@ Disallow: /private/
 # Sitemap
 Sitemap: https://rohittravels.com/sitemap.xml
 
-# Crawl delay for bots
-Crawl-delay: 0
-
 # Google Bot (Priority Crawler)
 User-agent: Googlebot
 Allow: /
 Allow: /routes/
 Disallow: /cgi-bin/
-Crawl-delay: 0
 
 # Google Image Bot
 User-agent: Googlebot-Image
