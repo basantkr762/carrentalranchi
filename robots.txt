@@ -1,3 +1,4 @@
+# Default rules for all crawlers
 User-agent: *
 Allow: /
 Allow: /cities/
@@ -14,18 +15,13 @@ Sitemap: https://rohittravels.com/sitemap-main.xml
 Sitemap: https://rohittravels.com/sitemap-cities.xml
 Sitemap: https://rohittravels.com/sitemap-routes.xml
 
-# Google Bot - No crawl-delay (Google ignores it and shows warning)
+# Google Bots
 User-agent: Googlebot
 Allow: /
-Allow: /routes/
-Allow: /cities/
-Allow: /images/
 
-# Google Image Bot
 User-agent: Googlebot-Image
 Allow: /images/
 
-# Google Mobile Bot
 User-agent: Googlebot-Mobile
 Allow: /
 
@@ -40,7 +36,6 @@ Allow: /
 # Yandex Bot
 User-agent: Yandex
 Allow: /
-Crawl-delay: 2
 
 # DuckDuckGo Bot
 User-agent: DuckDuckBot
