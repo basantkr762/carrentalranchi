@@ -1,17 +1,25 @@
 User-agent: *
 Allow: /
+Allow: /cities/
+Allow: /routes/
 Disallow: /cgi-bin/
 Disallow: /admin/
 Disallow: /private/
 
-# Sitemap
+# Sitemap Index
 Sitemap: https://rohittravels.com/sitemap.xml
 
-# Google Bot (Priority Crawler)
+# Individual Sitemaps
+Sitemap: https://rohittravels.com/sitemap-main.xml
+Sitemap: https://rohittravels.com/sitemap-cities.xml
+Sitemap: https://rohittravels.com/sitemap-routes.xml
+
+# Google Bot
 User-agent: Googlebot
 Allow: /
 Allow: /routes/
-Disallow: /cgi-bin/
+Allow: /cities/
+Crawl-delay: 1
 
 # Google Image Bot
 User-agent: Googlebot-Image
@@ -24,7 +32,7 @@ Allow: /
 # Bing Bot
 User-agent: Bingbot
 Allow: /
-Disallow: /cgi-bin/
+Crawl-delay: 2
 
 # Baidu Bot
 User-agent: Baiduspider
@@ -38,7 +46,7 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# Allow Social Media Crawlers
+# Social Media Crawlers
 User-agent: facebookexternalhit
 Allow: /
 
@@ -48,7 +56,7 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-# Allow SEO Bots (helps with backlink discovery)
+# SEO Bots
 User-agent: AhrefsBot
 Allow: /
 
