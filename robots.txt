@@ -14,12 +14,12 @@ Sitemap: https://rohittravels.com/sitemap-main.xml
 Sitemap: https://rohittravels.com/sitemap-cities.xml
 Sitemap: https://rohittravels.com/sitemap-routes.xml
 
-# Google Bot
+# Google Bot - No crawl-delay (Google ignores it and shows warning)
 User-agent: Googlebot
 Allow: /
 Allow: /routes/
 Allow: /cities/
-Crawl-delay: 1
+Allow: /images/
 
 # Google Image Bot
 User-agent: Googlebot-Image
@@ -32,7 +32,6 @@ Allow: /
 # Bing Bot
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 2
 
 # Baidu Bot
 User-agent: Baiduspider
@@ -41,6 +40,7 @@ Allow: /
 # Yandex Bot
 User-agent: Yandex
 Allow: /
+Crawl-delay: 2
 
 # DuckDuckGo Bot
 User-agent: DuckDuckBot
