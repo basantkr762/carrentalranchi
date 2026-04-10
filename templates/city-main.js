@@ -9,24 +9,24 @@ const { getHead, getHeader, getFooter, getFAQItem, getVehicleCards, getCTABanner
 function generateCityMainPage(city, allCities, cityRoutes) {
   const name = city.name;
   const slug = city.slug;
-  const title = `Cab Service in ${name} | Taxi Service ${name} @₹9/km | Rohit Travels`;
-  const metaDesc = `⭐ Best cab service in ${name} & taxi service at ₹9/km. Local taxi, outstation cab, airport transfer, wedding car. 24/7 booking. Call +91-7903629240`;
+  const title = `Cab Service in ${name} | Taxi Service ${name} @₹11/km | Rohit Travels`;
+  const metaDesc = `⭐ Best cab service in ${name} & taxi service at ₹11/km. Local taxi, outstation cab, airport transfer, wedding car. 24/7 booking. Call +91-7903629240`;
   const keywords = `cab service in ${name.toLowerCase()}, taxi service in ${name.toLowerCase()}, cabs in ${name.toLowerCase()}, ${name.toLowerCase()} cab, ${name.toLowerCase()} taxi, local cab ${name.toLowerCase()}, outstation cab ${name.toLowerCase()}, airport taxi ${name.toLowerCase()}, wedding car ${name.toLowerCase()}, car rental ${name.toLowerCase()}, rohit travels ${name.toLowerCase()}`;
   const canonical = `https://rohittravels.com/cities/${slug}/`;
 
   const breadcrumbSchema = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rohittravels.com/"},{"@type":"ListItem","position":2,"name":"Cities","item":"https://rohittravels.com/cities/"},{"@type":"ListItem","position":3,"name":`Cab Service in ${name}`,"item":canonical}]};
   
-  const taxiSchema = {"@context":"https://schema.org","@type":"TaxiService","name":`Rohit Travels - Cab Service in ${name}`,"description":`Best cab service and taxi service in ${name}, ${city.district}, Jharkhand. Book local taxi, outstation cabs, airport transfer, wedding cars at ₹9/km.`,"url":canonical,"telephone":"+91-7903629240","provider":{"@type":"LocalBusiness","name":"Rohit Travels Ranchi","telephone":"+91-7903629240","address":{"@type":"PostalAddress","streetAddress":"Birsa chowk, road no a2, Hawai Nagar, Gitilpiri","addressLocality":"Ranchi","addressRegion":"Jharkhand","postalCode":"834003","addressCountry":"IN"},"priceRange":"₹₹","image":"https://rohittravels.com/images/rohittravelslogo_desktop.webp"},"areaServed":{"@type":"City","name":name},"offers":{"@type":"AggregateOffer","priceCurrency":"INR","lowPrice":"9","highPrice":"50","offerCount":"10"}};
+  const taxiSchema = {"@context":"https://schema.org","@type":"TaxiService","name":`Rohit Travels - Cab Service in ${name}`,"description":`Best cab service and taxi service in ${name}, ${city.district}, Jharkhand. Book local taxi, outstation cabs, airport transfer, wedding cars at ₹11/km.`,"url":canonical,"telephone":"+91-7903629240","provider":{"@type":"LocalBusiness","name":"Rohit Travels Ranchi","telephone":"+91-7903629240","address":{"@type":"PostalAddress","streetAddress":"Birsa chowk, road no a2, Hawai Nagar, Gitilpiri","addressLocality":"Ranchi","addressRegion":"Jharkhand","postalCode":"834003","addressCountry":"IN"},"priceRange":"₹₹","image":"https://rohittravels.com/images/rohittravelslogo_desktop.webp"},"areaServed":{"@type":"City","name":name},"offers":{"@type":"AggregateOffer","priceCurrency":"INR","lowPrice":"9","highPrice":"50","offerCount":"10"}};
   
   const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":`What is the cab fare in ${name}?`,"acceptedAnswer":{"@type":"Answer","text":`Cab fare in ${name} starts at ₹9/km for sedan cars. For SUV (Ertiga), rates start from ₹11/km, and for Innova Crysta from ₹13/km. Local packages: 4hr/40km from ₹1,200, 8hr/80km from ₹2,000. Call +91-7903629240 for exact quotes.`}},
+    {"@type":"Question","name":`What is the cab fare in ${name}?`,"acceptedAnswer":{"@type":"Answer","text":`Cab fare in ${name} starts at ₹11/km for sedan cars. For SUV (Ertiga), rates start from ₹11/km, and for Innova Crysta from ₹13/km. Local packages: 4hr/40km from ₹1,200, 8hr/80km from ₹2,000. Call +91-7903629240 for exact quotes.`}},
     {"@type":"Question","name":`How to book a cab in ${name}?`,"acceptedAnswer":{"@type":"Answer","text":`You can book a cab in ${name} by calling +91-7903629240 or WhatsApp. Share your pickup location, destination, date, time, and number of passengers. We provide instant confirmation with driver details.`}},
     {"@type":"Question","name":`Is outstation cab available from ${name}?`,"acceptedAnswer":{"@type":"Answer","text":`Yes, Rohit Travels provides outstation cab service from ${name} to all major cities in Jharkhand, Bihar, West Bengal, and Odisha. One-way and round-trip options available at competitive rates.`}},
     {"@type":"Question","name":`Do you provide airport taxi in ${name}?`,"acceptedAnswer":{"@type":"Answer","text":`${city.airport ? `Yes, we provide 24/7 airport taxi service to and from ${city.airport} in ${name}. Our drivers track flight timings for timely pickup/drop.` : `While ${name} doesn't have a commercial airport, we provide cab service to the nearest airports including Birsa Munda Airport Ranchi. Pre-book for guaranteed availability.`}`}},
     {"@type":"Question","name":`Which cars are available for hire in ${name}?`,"acceptedAnswer":{"@type":"Answer","text":`We offer Maruti Dzire/Hyundai Aura (Sedan, 4-seater), Maruti Ertiga (SUV, 7-seater), Toyota Innova Crysta (Premium, 7-seater), and luxury cars like Audi & BMW for weddings in ${name}.`}},
-    {"@type":"Question","name":`What is the best taxi service in ${name}?`,"acceptedAnswer":{"@type":"Answer","text":`Rohit Travels is rated as the best taxi service in ${name} with a 5.0★ Google rating. We offer transparent pricing at ₹9/km, professional drivers, clean AC cars, and 24/7 availability.`}},
+    {"@type":"Question","name":`What is the best taxi service in ${name}?`,"acceptedAnswer":{"@type":"Answer","text":`Rohit Travels is rated as the best taxi service in ${name} with a 5.0★ Google rating. We offer transparent pricing at ₹11/km, professional drivers, clean AC cars, and 24/7 availability.`}},
     {"@type":"Question","name":`Is wedding car available for rent in ${name}?`,"acceptedAnswer":{"@type":"Answer","text":`Yes, we provide luxury wedding car rental in ${name} including Audi, BMW, and premium decorated cars for marriage ceremonies. Book at least 7 days in advance. Call +91-7903629240.`}},
-    {"@type":"Question","name":`What are the local taxi charges in ${name}?`,"acceptedAnswer":{"@type":"Answer","text":`Local taxi charges in ${name}: Sedan ₹9/km (min ₹1,200 for 4hr/40km), SUV ₹11/km (min ₹1,600), Innova Crysta ₹13/km (min ₹2,000). Package rates available for full-day hire. No hidden charges.`}}
+    {"@type":"Question","name":`What are the local taxi charges in ${name}?`,"acceptedAnswer":{"@type":"Answer","text":`Local taxi charges in ${name}: Sedan ₹11/km (min ₹1,200 for 4hr/40km), SUV ₹11/km (min ₹1,600), Innova Crysta ₹13/km (min ₹2,000). Package rates available for full-day hire. No hidden charges.`}}
   ]};
 
   const nearbyRoutes = cityRoutes.slice(0,8);
@@ -47,11 +47,11 @@ ${getHeader()}
     <!-- Hero -->
     <section class="route-hero">
         <div class="container">
-            <h1>Best Cab Service in ${name} – Taxi Booking @₹9/km</h1>
+            <h1>Best Cab Service in ${name} – Taxi Booking @₹11/km</h1>
             <p style="font-size:17px;opacity:.95;max-width:700px;margin:0 auto 20px">Book affordable & reliable cab service in ${name} with Rohit Travels. Local taxi, outstation cabs, airport transfers & wedding cars available 24/7.</p>
             <div class="route-meta">
                 <span><i class="fas fa-map-marker-alt"></i> ${name}, ${city.district}</span>
-                <span><i class="fas fa-tag"></i> From ₹9/km</span>
+                <span><i class="fas fa-tag"></i> From ₹11/km</span>
                 <span><i class="fas fa-star" style="color:#ffd200"></i> 5.0 Rated</span>
                 <span><i class="fas fa-clock"></i> 24/7 Service</span>
             </div>
@@ -68,7 +68,7 @@ ${getHeader()}
         <div class="container">
             <div class="seo-content">
                 <h2>About Cab Service in ${name}, Jharkhand</h2>
-                <p>Looking for the <strong>best cab service in ${name}</strong>? Rohit Travels offers premium taxi service in ${name} at just <strong>₹9/km</strong> — the most competitive rate in the region. Serving ${name} and surrounding areas of ${city.district} district, we provide reliable, comfortable, and affordable transportation for all your travel needs.</p>
+                <p>Looking for the <strong>best cab service in ${name}</strong>? Rohit Travels offers premium taxi service in ${name} at just <strong>₹11/km</strong> — the most competitive rate in the region. Serving ${name} and surrounding areas of ${city.district} district, we provide reliable, comfortable, and affordable transportation for all your travel needs.</p>
                 <p>${city.description} With a population of ${city.pop}+, ${name} is an important city in Jharkhand known for ${city.famousFor}. Whether you need a <strong>local cab in ${name}</strong>, an <strong>outstation taxi from ${name}</strong>, ${city.airport ? `<strong>airport transfer to ${city.airport}</strong>,` : ''} or a <strong>luxury wedding car</strong>, Rohit Travels is your trusted partner.</p>
                 <p>Our fleet of well-maintained sedans (Maruti Dzire, Hyundai Aura), SUVs (Maruti Ertiga 7-seater), and premium vehicles (Toyota Innova Crysta) ensures you travel in comfort. All our drivers are experienced, verified professionals who know ${name} and ${city.district} like the back of their hand. With <strong>5000+ satisfied customers</strong> and a perfect <strong>5.0★ Google rating</strong>, we are the #1 choice for cab service in ${name}.</p>
             </div>
@@ -129,11 +129,11 @@ ${getHeader()}
                     <tr><th>Package / Car Type</th><th>Sedan (Dzire/Aura)</th><th>SUV (Ertiga)</th><th>Crysta (Premium)</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td><strong>Per KM Rate</strong></td><td class="price">₹9/km</td><td class="price">₹11/km</td><td class="price">₹13/km</td></tr>
+                    <tr><td><strong>Per KM Rate</strong></td><td class="price">₹11/km</td><td class="price">₹11/km</td><td class="price">₹13/km</td></tr>
                     <tr><td>4 Hrs / 40 KM (Local)</td><td class="price">₹1,200</td><td class="price">₹1,600</td><td class="price">₹2,000</td></tr>
                     <tr><td>8 Hrs / 80 KM (Full Day)</td><td class="price">₹2,000</td><td class="price">₹2,800</td><td class="price">₹3,500</td></tr>
                     <tr><td>12 Hrs / 120 KM (Extended)</td><td class="price">₹3,000</td><td class="price">₹4,000</td><td class="price">₹5,000</td></tr>
-                    <tr><td>Outstation Per KM</td><td class="price">₹9/km</td><td class="price">₹11/km</td><td class="price">₹13/km</td></tr>
+                    <tr><td>Outstation Per KM</td><td class="price">₹11/km</td><td class="price">₹11/km</td><td class="price">₹13/km</td></tr>
                 </tbody>
             </table>
             <p style="text-align:center;color:#888;margin-top:15px;font-size:13px">✅ Fare includes driver allowance & fuel. Night charges (10PM–6AM) extra ₹200. Toll & parking extra.</p>
@@ -176,7 +176,7 @@ ${nearbyRoutes.map(r => `                <a href="/routes/${r.slug}.html" class=
             <div class="highlights-grid">
 ${city.landmarks.map(l => `                <div class="highlight-card">
                     <h3>📍 ${l}</h3>
-                    <p>Visit ${l} in ${name} with Rohit Travels taxi service. Comfortable AC cab with experienced local driver. Book now at ₹9/km.</p>
+                    <p>Visit ${l} in ${name} with Rohit Travels taxi service. Comfortable AC cab with experienced local driver. Book now at ₹11/km.</p>
                 </div>`).join('\n')}
             </div>
         </div>
@@ -187,11 +187,11 @@ ${city.landmarks.map(l => `                <div class="highlight-card">
         <div class="container">
             <h2>❓ FAQs – Cab Service in ${name}</h2>
             <div class="faq-section">
-${getFAQItem(`What is the cab fare in ${name}?`, `Cab fare in ${name} starts at ₹9/km for sedan cars (Dzire/Aura). SUV (Ertiga) costs ₹11/km and Innova Crysta costs ₹13/km. Local package: 4hr/40km from ₹1,200. Full day 8hr/80km from ₹2,000. No hidden charges, transparent pricing.`, true)}
+${getFAQItem(`What is the cab fare in ${name}?`, `Cab fare in ${name} starts at ₹11/km for sedan cars (Dzire/Aura). SUV (Ertiga) costs ₹11/km and Innova Crysta costs ₹13/km. Local package: 4hr/40km from ₹1,200. Full day 8hr/80km from ₹2,000. No hidden charges, transparent pricing.`, true)}
 ${getFAQItem(`How to book a taxi in ${name}?`, `Book a taxi in ${name} by calling +91-7903629240 or WhatsApp. Share your pickup location, destination, date & time. Get instant confirmation with driver details. Available 24/7, 365 days.`)}
-${getFAQItem(`Is outstation cab available from ${name}?`, `Yes, Rohit Travels provides outstation cab service from ${name} to all major cities including Ranchi, Jamshedpur, Patna, Kolkata, and 50+ destinations. One-way and round-trip options at ₹9/km onwards.`)}
+${getFAQItem(`Is outstation cab available from ${name}?`, `Yes, Rohit Travels provides outstation cab service from ${name} to all major cities including Ranchi, Jamshedpur, Patna, Kolkata, and 50+ destinations. One-way and round-trip options at ₹11/km onwards.`)}
 ${getFAQItem(`Do you provide airport taxi in ${name}?`, `${city.airport ? `Yes, we provide 24/7 airport taxi service to ${city.airport}. Flight tracking, no surge pricing, pre-booking available.` : `We provide cab service from ${name} to nearest airports including Birsa Munda Airport Ranchi. Pre-book for guaranteed availability.`}`)}
-${getFAQItem(`Which is the best cab service in ${name}?`, `Rohit Travels is the #1 rated cab service in ${name} with 5.0★ Google rating. We offer ₹9/km pricing, professional drivers, clean AC cars, 24/7 service, and transparent billing. Trusted by 5000+ customers since 2015.`)}
+${getFAQItem(`Which is the best cab service in ${name}?`, `Rohit Travels is the #1 rated cab service in ${name} with 5.0★ Google rating. We offer ₹11/km pricing, professional drivers, clean AC cars, 24/7 service, and transparent billing. Trusted by 5000+ customers since 2015.`)}
 ${getFAQItem(`Is wedding car available in ${name}?`, `Yes! We provide luxury wedding car rental in ${name} — Audi, BMW, Innova Crysta, and decorated cars for barat, reception, vidaai, and guest transportation. Book 7-15 days in advance for best availability.`)}
 ${getFAQItem(`What is the local taxi rate in ${name}?`, `Local taxi rates in ${name}: Sedan ₹1,200 (4hr/40km), ₹2,000 (8hr/80km). SUV ₹1,600 (4hr/40km), ₹2,800 (8hr/80km). Crysta ₹2,000 (4hr/40km), ₹3,500 (8hr/80km). Extra km/hr charges apply beyond package.`)}
 ${getFAQItem(`Is advance payment required for booking in ${name}?`, `No advance for local bookings. For outstation trips, 20% advance may be requested. For wedding cars, 30% advance to confirm. Balance payable after journey via cash, UPI, or card.`)}
@@ -223,7 +223,7 @@ ${getFAQItem(`Is advance payment required for booking in ${name}?`, `No advance 
                 <p>Book a cab in ${name} to explore these amazing destinations: ${city.landmarks.join(', ')}. ${city.localAttractions ? `Additional attractions include ${city.localAttractions}.` : ''} Our experienced local drivers know every route and will ensure you have a memorable experience.</p>
 
                 <h3>Book Your ${name} Cab Now</h3>
-                <p>Ready to book a <strong>cab in ${name}</strong>? Call <a href="tel:+917903629240" style="color:#667eea;font-weight:600">+91 7903629240</a> or <a href="https://wa.me/917903629240" style="color:#25D366;font-weight:600">WhatsApp us</a> for instant booking. Available 24/7, 365 days a year. Best rates guaranteed — starting at just ₹9/km!</p>
+                <p>Ready to book a <strong>cab in ${name}</strong>? Call <a href="tel:+917903629240" style="color:#667eea;font-weight:600">+91 7903629240</a> or <a href="https://wa.me/917903629240" style="color:#25D366;font-weight:600">WhatsApp us</a> for instant booking. Available 24/7, 365 days a year. Best rates guaranteed — starting at just ₹11/km!</p>
             </div>
         </div>
     </section>

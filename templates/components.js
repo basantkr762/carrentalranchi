@@ -210,7 +210,7 @@ function getVehicleCards(cityName) {
                     <img src="/images/dezire.webp" alt="Dzire Sedan Cab ${cityName}" loading="lazy" width="400" height="180">
                     <div class="vehicle-info">
                         <h3>Maruti Dzire / Hyundai Aura</h3>
-                        <div class="vehicle-price">₹9/km</div>
+                        <div class="vehicle-price">₹11/km</div>
                         <div class="vehicle-features"><span>4 Seater</span><span>AC</span><span>Sedan</span><span>Best Value</span></div>
                     </div>
                 </div>

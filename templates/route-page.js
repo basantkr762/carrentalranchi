@@ -8,14 +8,14 @@ const { getHead, getHeader, getFooter, getFAQItem, getVehicleCards, getCTABanner
 function generateRoutePage(route, fromCity, toCity, allRoutes, allCities) {
   const from = fromCity.name, to = toCity.name;
   const reverseSlug = `${route.toSlug}-to-${route.fromSlug}-cab`;
-  const title = `${from} to ${to} Cab @₹9/km | Taxi Fare, Booking | Rohit Travels`;
-  const metaDesc = `Book ${from} to ${to} cab at ₹9/km. Distance ${route.dist}, Time ${route.time}. Sedan ₹${route.sedanOW}, SUV ₹${route.suvOW}. One-way & round trip. Call +91-7903629240`;
+  const title = `${from} to ${to} Cab @₹11/km | Taxi Fare, Booking | Rohit Travels`;
+  const metaDesc = `Book ${from} to ${to} cab at ₹11/km. Distance ${route.dist}, Time ${route.time}. Sedan ₹${route.sedanOW}, SUV ₹${route.suvOW}. One-way & round trip. Call +91-7903629240`;
   const keywords = `${from.toLowerCase()} to ${to.toLowerCase()} cab, ${from.toLowerCase()} to ${to.toLowerCase()} taxi, ${from.toLowerCase()} to ${to.toLowerCase()} taxi fare, ${from.toLowerCase()} to ${to.toLowerCase()} car rental, cab from ${from.toLowerCase()} to ${to.toLowerCase()}, one way taxi ${from.toLowerCase()} ${to.toLowerCase()}, outstation cab ${from.toLowerCase()}, ${to.toLowerCase()} to ${from.toLowerCase()} cab`;
   const canonical = `https://rohittravels.com/routes/${route.slug}.html`;
   
   const bc = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rohittravels.com/"},{"@type":"ListItem","position":2,"name":"Routes","item":"https://rohittravels.com/#routes"},{"@type":"ListItem","position":3,"name":`${from} to ${to} Cab`,"item":canonical}]};
   
-  const taxiSchema = {"@context":"https://schema.org","@type":"TaxiService","name":`Rohit Travels - ${from} to ${to} Cab Service`,"description":`${from} to ${to} taxi service at ₹9/km. Distance: ${route.dist}. Book sedan, SUV or Innova Crysta for one-way or round trip.`,"url":canonical,"telephone":"+91-7903629240","provider":{"@type":"LocalBusiness","name":"Rohit Travels Ranchi","telephone":"+91-7903629240","address":{"@type":"PostalAddress","streetAddress":"Birsa chowk, road no a2, Hawai Nagar, Gitilpiri","addressLocality":"Ranchi","addressRegion":"Jharkhand","postalCode":"834003","addressCountry":"IN"},"priceRange":"₹₹","image":"https://rohittravels.com/images/rohittravelslogo_desktop.webp"},"areaServed":[{"@type":"City","name":from},{"@type":"City","name":to}],"offers":{"@type":"AggregateOffer","priceCurrency":"INR","lowPrice":route.sedanOW.replace(/,/g,''),"highPrice":route.crystaRT.replace(/,/g,''),"offerCount":"6"}};
+  const taxiSchema = {"@context":"https://schema.org","@type":"TaxiService","name":`Rohit Travels - ${from} to ${to} Cab Service`,"description":`${from} to ${to} taxi service at ₹11/km. Distance: ${route.dist}. Book sedan, SUV or Innova Crysta for one-way or round trip.`,"url":canonical,"telephone":"+91-7903629240","provider":{"@type":"LocalBusiness","name":"Rohit Travels Ranchi","telephone":"+91-7903629240","address":{"@type":"PostalAddress","streetAddress":"Birsa chowk, road no a2, Hawai Nagar, Gitilpiri","addressLocality":"Ranchi","addressRegion":"Jharkhand","postalCode":"834003","addressCountry":"IN"},"priceRange":"₹₹","image":"https://rohittravels.com/images/rohittravelslogo_desktop.webp"},"areaServed":[{"@type":"City","name":from},{"@type":"City","name":to}],"offers":{"@type":"AggregateOffer","priceCurrency":"INR","lowPrice":route.sedanOW.replace(/,/g,''),"highPrice":route.crystaRT.replace(/,/g,''),"offerCount":"6"}};
   
   const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":`What is the taxi fare from ${from} to ${to}?`,"acceptedAnswer":{"@type":"Answer","text":`The taxi fare from ${from} to ${to} starts at ₹${route.sedanOW} for sedan (one-way). SUV costs ₹${route.suvOW} and Innova Crysta costs ₹${route.crystaOW}. Round trip: Sedan ₹${route.sedanRT}, SUV ₹${route.suvRT}, Crysta ₹${route.crystaRT}. Fare includes driver allowance and fuel.`}},
@@ -24,7 +24,7 @@ function generateRoutePage(route, fromCity, toCity, allRoutes, allCities) {
     {"@type":"Question","name":`Is one-way cab available from ${from} to ${to}?`,"acceptedAnswer":{"@type":"Answer","text":`Yes! One-way drop from ${from} to ${to} starting ₹${route.sedanOW} (sedan). No return charges. Pay only for one direction.`}},
     {"@type":"Question","name":`Which cars are available for ${from} to ${to}?`,"acceptedAnswer":{"@type":"Answer","text":`Sedan (Dzire/Aura, 4-seater), SUV (Ertiga, 7-seater), Innova Crysta (Premium, 7-seater), and luxury cars (Audi/BMW) for special occasions.`}},
     {"@type":"Question","name":`Is ${to} to ${from} cab also available?`,"acceptedAnswer":{"@type":"Answer","text":`Yes! We provide bi-directional service. ${to} to ${from} cab is available at the same rates. Book one-way or round-trip.`}},
-    {"@type":"Question","name":`What is the per km rate from ${from} to ${to}?`,"acceptedAnswer":{"@type":"Answer","text":`Per km rate: Sedan ₹9/km, SUV (Ertiga) ₹11/km, Innova Crysta ₹13/km. These are all-inclusive rates with driver allowance.`}},
+    {"@type":"Question","name":`What is the per km rate from ${from} to ${to}?`,"acceptedAnswer":{"@type":"Answer","text":`Per km rate: Sedan ₹11/km, SUV (Ertiga) ₹11/km, Innova Crysta ₹13/km. These are all-inclusive rates with driver allowance.`}},
     {"@type":"Question","name":`Can I make stops during ${from} to ${to} trip?`,"acceptedAnswer":{"@type":"Answer","text":`Yes, you can make stops along the route. Popular stops include ${route.highlights}. Extra charges may apply for significant detours.`}}
   ]};
 
@@ -56,7 +56,7 @@ ${getHeader()}
 
     <section class="route-hero">
         <div class="container">
-            <h1>${from} to ${to} Cab Booking – Taxi Service @₹9/km</h1>
+            <h1>${from} to ${to} Cab Booking – Taxi Service @₹11/km</h1>
             <p style="font-size:17px;opacity:.95;max-width:700px;margin:0 auto 20px">Book affordable & reliable ${from} to ${to} cab with Rohit Travels. Professional drivers, clean cars, 24/7 booking.</p>
             <div class="route-meta">
                 <span><i class="fas fa-road"></i> ${route.dist}</span>
@@ -79,7 +79,7 @@ ${getHeader()}
             <table class="fare-table">
                 <thead><tr><th>Car Type</th><th>Capacity</th><th>One-Way Fare</th><th>Round Trip Fare</th><th>Per KM</th></tr></thead>
                 <tbody>
-                    <tr><td><strong>Sedan</strong> (Dzire/Aura)</td><td>4 Pax</td><td class="price">₹${route.sedanOW}</td><td class="price">₹${route.sedanRT}</td><td>₹9/km</td></tr>
+                    <tr><td><strong>Sedan</strong> (Dzire/Aura)</td><td>4 Pax</td><td class="price">₹${route.sedanOW}</td><td class="price">₹${route.sedanRT}</td><td>₹11/km</td></tr>
                     <tr><td><strong>SUV</strong> (Ertiga 7-Seater)</td><td>6 Pax</td><td class="price">₹${route.suvOW}</td><td class="price">₹${route.suvRT}</td><td>₹11/km</td></tr>
                     <tr><td><strong>Innova Crysta</strong></td><td>7 Pax</td><td class="price">₹${route.crystaOW}</td><td class="price">₹${route.crystaRT}</td><td>₹13/km</td></tr>
                 </tbody>
@@ -154,7 +154,7 @@ ${relatedRoutes.map(r => `                <a href="/routes/${r.slug}.html" class
         <div class="container">
             <div class="seo-content">
                 <h2>${from} to ${to} Cab Service – Complete Travel Guide</h2>
-                <p>Looking for the <strong>best ${from} to ${to} cab service</strong>? Rohit Travels offers affordable, reliable taxi service from ${from} to ${to} starting at just <strong>₹9/km</strong>. With over 10 years of experience, 5000+ happy customers, and a 5.0★ Google rating, we are the most trusted <strong>${from} to ${to} taxi</strong> provider.</p>
+                <p>Looking for the <strong>best ${from} to ${to} cab service</strong>? Rohit Travels offers affordable, reliable taxi service from ${from} to ${to} starting at just <strong>₹11/km</strong>. With over 10 years of experience, 5000+ happy customers, and a 5.0★ Google rating, we are the most trusted <strong>${from} to ${to} taxi</strong> provider.</p>
 
                 <h3>About ${from}</h3>
                 <p>${fromDesc} Key attractions in ${from} include ${fromLandmarks}. ${fromCity.famousFor ? `The city is famous for ${fromCity.famousFor}.` : ''}</p>

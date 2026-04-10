@@ -19,8 +19,8 @@ const routes = [
 ];
 
 function generatePage(r) {
-  const title = `${r.from} to ${r.to} Cab @₹9/km | Taxi Fare, Booking | Rohit Travels`;
-  const metaDesc = `Book ${r.from} to ${r.to} cab at ₹9/km. Distance ${r.dist}, Time ${r.time}. Sedan ₹${r.sedanOW}, SUV ₹${r.suvOW}. One-way & round trip. Call +91-7903629240`;
+  const title = `${r.from} to ${r.to} Cab @₹11/km | Taxi Fare, Booking | Rohit Travels`;
+  const metaDesc = `Book ${r.from} to ${r.to} cab at ₹11/km. Distance ${r.dist}, Time ${r.time}. Sedan ₹${r.sedanOW}, SUV ₹${r.suvOW}. One-way & round trip. Call +91-7903629240`;
   const keywords = `${r.from.toLowerCase()} to ${r.to.toLowerCase()} cab, ${r.from.toLowerCase()} to ${r.to.toLowerCase()} taxi, ${r.from.toLowerCase()} to ${r.to.toLowerCase()} taxi fare, ${r.from.toLowerCase()} to ${r.to.toLowerCase()} car rental, cab from ${r.from.toLowerCase()} to ${r.to.toLowerCase()}, one way taxi ${r.from.toLowerCase()} ${r.to.toLowerCase()}, outstation cab ${r.from.toLowerCase()}`;
   const otherRoutes = routes.filter(x => x.slug !== r.slug).slice(0, 6);
 
@@ -77,7 +77,7 @@ function generatePage(r) {
         "@context": "https://schema.org",
         "@type": "TaxiService",
         "name": "Rohit Travels - ${r.from} to ${r.to} Cab Service",
-        "description": "${r.from} to ${r.to} taxi service at ₹9/km. Distance: ${r.dist}. Book sedan, SUV or Innova Crysta for one-way or round trip.",
+        "description": "${r.from} to ${r.to} taxi service at ₹11/km. Distance: ${r.dist}. Book sedan, SUV or Innova Crysta for one-way or round trip.",
         "url": "https://rohittravels.com/routes/${r.slug}.html",
         "telephone": "+91-7903629240",
         "provider": {
@@ -232,7 +232,7 @@ function generatePage(r) {
     <!-- Route Hero -->
     <section class="route-hero">
         <div class="container">
-            <h1>${r.from} to ${r.to} Cab Booking – Taxi Service @₹9/km</h1>
+            <h1>${r.from} to ${r.to} Cab Booking – Taxi Service @₹11/km</h1>
             <p style="font-size:18px;opacity:.95;max-width:700px;margin:0 auto 20px">Book affordable & reliable ${r.from} to ${r.to} cab service with Rohit Travels. Professional drivers, clean cars, 24/7 booking.</p>
             <div class="route-meta">
                 <span><i class="fas fa-road"></i> ${r.dist}</span>
@@ -257,7 +257,7 @@ function generatePage(r) {
                     <tr><th>Car Type</th><th>Capacity</th><th>One-Way Fare</th><th>Round Trip Fare</th><th>Per KM Rate</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td><strong>Sedan</strong> (Dzire / Aura)</td><td>4 Passengers</td><td class="price">₹${r.sedanOW}</td><td class="price">₹${r.sedanRT}</td><td>₹9/km</td></tr>
+                    <tr><td><strong>Sedan</strong> (Dzire / Aura)</td><td>4 Passengers</td><td class="price">₹${r.sedanOW}</td><td class="price">₹${r.sedanRT}</td><td>₹11/km</td></tr>
                     <tr><td><strong>SUV</strong> (Ertiga 7-Seater)</td><td>6 Passengers</td><td class="price">₹${r.suvOW}</td><td class="price">₹${r.suvRT}</td><td>₹11/km</td></tr>
                     <tr><td><strong>Innova Crysta</strong> (Premium)</td><td>7 Passengers</td><td class="price">₹${r.crystaOW}</td><td class="price">₹${r.crystaRT}</td><td>₹13/km</td></tr>
                 </tbody>
@@ -290,7 +290,7 @@ function generatePage(r) {
                     <div class="vehicle-info">
                         <h3>Maruti Dzire / Hyundai Aura</h3>
                         <div class="vehicle-price">₹${r.sedanOW} <small style="font-size:13px;color:#888;font-weight:400">one-way</small></div>
-                        <div class="vehicle-features"><span>4 Seater</span><span>AC</span><span>Sedan</span><span>₹9/km</span></div>
+                        <div class="vehicle-features"><span>4 Seater</span><span>AC</span><span>Sedan</span><span>₹11/km</span></div>
                     </div>
                 </div>
                 <div class="vehicle-card">
@@ -319,7 +319,7 @@ function generatePage(r) {
             <div class="cta-banner">
                 <h2>Why Book ${r.from} to ${r.to} Cab with Rohit Travels?</h2>
                 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;text-align:left;margin:30px 0">
-                    <div><strong>✅ ₹9/km Starting</strong><br><small>Lowest price guaranteed</small></div>
+                    <div><strong>✅ ₹11/km Starting</strong><br><small>Lowest price guaranteed</small></div>
                     <div><strong>✅ No Hidden Charges</strong><br><small>Transparent billing always</small></div>
                     <div><strong>✅ Experienced Drivers</strong><br><small>10+ years on this route</small></div>
                     <div><strong>✅ 24/7 Availability</strong><br><small>Book anytime, travel anytime</small></div>
@@ -386,7 +386,7 @@ ${otherRoutes.map(or => `                <a href="/routes/${or.slug}.html" class
         <div class="container">
             <div class="seo-content">
                 <h2>${r.from} to ${r.to} Cab Service – Complete Travel Guide</h2>
-                <p>Looking for the <strong>best ${r.from} to ${r.to} cab service</strong>? Rohit Travels offers affordable, reliable taxi service from ${r.from} to ${r.to} starting at just <strong>₹9/km</strong>. With over 10 years of experience, 5000+ happy customers, and a 5.0★ Google rating, we are the most trusted <strong>${r.from} to ${r.to} taxi</strong> provider.</p>
+                <p>Looking for the <strong>best ${r.from} to ${r.to} cab service</strong>? Rohit Travels offers affordable, reliable taxi service from ${r.from} to ${r.to} starting at just <strong>₹11/km</strong>. With over 10 years of experience, 5000+ happy customers, and a 5.0★ Google rating, we are the most trusted <strong>${r.from} to ${r.to} taxi</strong> provider.</p>
 
                 <h3>About the ${r.from} to ${r.to} Route</h3>
                 <p>${r.desc} Key attractions along the way include ${r.highlights}. Whether you're traveling for business, pilgrimage, family trip, or medical purposes, our <strong>${r.from} to ${r.to} car rental</strong> service ensures a comfortable journey.</p>
