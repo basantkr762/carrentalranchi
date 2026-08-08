@@ -3,29 +3,8 @@
 # Last Updated: 2026-08-08
 # ================================================================
 
-# Default: Allow all ethical crawlers
-User-agent: *
-Allow: /
-Allow: /cities/
-Allow: /routes/
-Allow: /images/
-Disallow: /cgi-bin/
-Disallow: /admin/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /sw.js
-Crawl-delay: 1
-
-# Sitemap Index
-Sitemap: https://rohittravels.com/sitemap.xml
-
-# Individual Sitemaps
-Sitemap: https://rohittravels.com/sitemap-main.xml
-Sitemap: https://rohittravels.com/sitemap-cities.xml
-Sitemap: https://rohittravels.com/sitemap-routes.xml
-
 # ================================================================
-# GOOGLE BOTS
+# GOOGLEBOT — Full access, no crawl delay (highest priority)
 # ================================================================
 User-agent: Googlebot
 Allow: /
@@ -33,6 +12,7 @@ Crawl-delay: 0
 
 User-agent: Googlebot-Image
 Allow: /images/
+Allow: /
 
 User-agent: Googlebot-Mobile
 Allow: /
@@ -43,8 +23,12 @@ Allow: /
 User-agent: Google-InspectionTool
 Allow: /
 
+# Google Gemini / Bard (AI search — explicitly allowed)
+User-agent: Google-Extended
+Allow: /
+
 # ================================================================
-# BING BOT
+# BING / MICROSOFT BOTS
 # ================================================================
 User-agent: Bingbot
 Allow: /
@@ -57,7 +41,7 @@ User-agent: MSNBot-Media
 Allow: /images/
 
 # ================================================================
-# OTHER SEARCH ENGINES
+# OTHER MAJOR SEARCH ENGINES
 # ================================================================
 User-agent: Baiduspider
 Allow: /
@@ -73,15 +57,11 @@ User-agent: Slurp
 Allow: /
 
 # ================================================================
-# AI BOTS — Allow for AI Search & LLM Training
+# AI BOTS — Explicitly allowed for AI Search & LLM Training
 # ================================================================
 
 # OpenAI GPT (ChatGPT)
 User-agent: GPTBot
-Allow: /
-
-# Google Gemini / Bard
-User-agent: Google-Extended
 Allow: /
 
 # Anthropic Claude
@@ -111,6 +91,10 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
 # ================================================================
 # SOCIAL MEDIA CRAWLERS
 # ================================================================
@@ -133,7 +117,7 @@ User-agent: Discordbot
 Allow: /
 
 # ================================================================
-# SEO TOOL BOTS
+# SEO TOOL BOTS (rate-limited)
 # ================================================================
 User-agent: AhrefsBot
 Allow: /
@@ -143,8 +127,34 @@ User-agent: SemrushBot
 Allow: /
 Crawl-delay: 10
 
+# ================================================================
+# BLOCKED BOTS (spam/scrapers)
+# ================================================================
 User-agent: MJ12bot
 Disallow: /
 
 User-agent: DotBot
 Disallow: /
+
+# ================================================================
+# DEFAULT: Allow all ethical crawlers
+# ================================================================
+User-agent: *
+Allow: /
+Allow: /cities/
+Allow: /routes/
+Allow: /images/
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /sw.js
+Crawl-delay: 1
+
+# ================================================================
+# SITEMAPS
+# ================================================================
+Sitemap: https://rohittravels.com/sitemap.xml
+Sitemap: https://rohittravels.com/sitemap-main.xml
+Sitemap: https://rohittravels.com/sitemap-cities.xml
+Sitemap: https://rohittravels.com/sitemap-routes.xml
