@@ -9,3 +9,9 @@ https://www.rohittravels.com/* https://rohittravels.com/:splat 301
 /airport-taxi /routes/ranchi-airport-taxi.html 301
 /outstation /routes/ 301
 /city-taxi /cities/ 301
+
+# Hazaribag -> Hazaribagh 301 Redirects
+/routes/*hazaribag* /routes/ranchi-to-hazaribagh-cab.html 301
+/cities/hazaribag/* /cities/hazaribagh/ 301
+/cities/hazaribag /cities/hazaribagh/ 301
+
