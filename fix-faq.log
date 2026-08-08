@@ -1,0 +1,5 @@
+PASS 1: FAQPage schema added to 63 city index pages (0 skipped/no FAQ found)
+PASS 2: FAQ content + schema added to 63 popular-routes pages
+PASS 3: FAQ content + schema added to 63 tour-packages pages
+PASS 4: FAQ schema added to cities/index.html
+PASS 4: FAQ schema added to routes/index.html
