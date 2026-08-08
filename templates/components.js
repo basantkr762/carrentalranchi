@@ -43,10 +43,10 @@ function getHead({ title, metaDesc, keywords, canonical, ogTitle, ogDesc, breadc
     ${JSON.stringify(breadcrumbSchema, null, 2)}
     </script>
 
-    ${extraSchema ? `<!-- Page-Specific Schema -->
+    ${(Array.isArray(extraSchema) ? extraSchema : (extraSchema ? [extraSchema] : [])).map(s => `<!-- Page-Specific Schema -->
     <script type="application/ld+json">
-    ${JSON.stringify(extraSchema, null, 2)}
-    </script>` : ''}
+    ${JSON.stringify(s, null, 2)}
+    </script>`).join('\n')}
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
