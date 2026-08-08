@@ -1,11 +1,20 @@
-# Default rules for all crawlers
+# ================================================================
+# robots.txt - Rohit Travels Ranchi (rohittravels.com)
+# Last Updated: 2026-08-08
+# ================================================================
+
+# Default: Allow all ethical crawlers
 User-agent: *
 Allow: /
 Allow: /cities/
 Allow: /routes/
+Allow: /images/
 Disallow: /cgi-bin/
 Disallow: /admin/
 Disallow: /private/
+Disallow: /*.json$
+Disallow: /sw.js
+Crawl-delay: 1
 
 # Sitemap Index
 Sitemap: https://rohittravels.com/sitemap.xml
@@ -15,9 +24,12 @@ Sitemap: https://rohittravels.com/sitemap-main.xml
 Sitemap: https://rohittravels.com/sitemap-cities.xml
 Sitemap: https://rohittravels.com/sitemap-routes.xml
 
-# Google Bots
+# ================================================================
+# GOOGLE BOTS
+# ================================================================
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
 User-agent: Googlebot-Image
 Allow: /images/
@@ -25,23 +37,83 @@ Allow: /images/
 User-agent: Googlebot-Mobile
 Allow: /
 
-# Bing Bot
-User-agent: Bingbot
+User-agent: Googlebot-Video
 Allow: /
 
-# Baidu Bot
+User-agent: Google-InspectionTool
+Allow: /
+
+# ================================================================
+# BING BOT
+# ================================================================
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: MSNBot
+Allow: /
+
+User-agent: MSNBot-Media
+Allow: /images/
+
+# ================================================================
+# OTHER SEARCH ENGINES
+# ================================================================
 User-agent: Baiduspider
 Allow: /
 
-# Yandex Bot
 User-agent: Yandex
 Allow: /
+Crawl-delay: 2
 
-# DuckDuckGo Bot
 User-agent: DuckDuckBot
 Allow: /
 
-# Social Media Crawlers
+User-agent: Slurp
+Allow: /
+
+# ================================================================
+# AI BOTS — Allow for AI Search & LLM Training
+# ================================================================
+
+# OpenAI GPT (ChatGPT)
+User-agent: GPTBot
+Allow: /
+
+# Google Gemini / Bard
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# Common Crawl (used by AI training)
+User-agent: CCBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# ================================================================
+# SOCIAL MEDIA CRAWLERS
+# ================================================================
 User-agent: facebookexternalhit
 Allow: /
 
@@ -51,9 +123,28 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-# SEO Bots
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+# ================================================================
+# SEO TOOL BOTS
+# ================================================================
 User-agent: AhrefsBot
 Allow: /
+Crawl-delay: 10
 
 User-agent: SemrushBot
 Allow: /
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
