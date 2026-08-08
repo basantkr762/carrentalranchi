@@ -9,7 +9,7 @@ const { getHead, getHeader, getFooter, getFAQItem, getVehicleCards, getCTABanner
 function generateCityMainPage(city, allCities, cityRoutes) {
   const name = city.name;
   const slug = city.slug;
-  const title = `Cab Service in ${name} | Taxi Service ${name} @₹11/km | Rohit Travels`;
+  const title = `Cab Service in ${name} @₹11/km | Rohit Travels`;
   const metaDesc = `⭐ Best cab service in ${name} & taxi service at ₹11/km. Local taxi, outstation cab, airport transfer, wedding car. 24/7 booking. Call +91-7903629240`;
   const keywords = `cab service in ${name.toLowerCase()}, taxi service in ${name.toLowerCase()}, cabs in ${name.toLowerCase()}, ${name.toLowerCase()} cab, ${name.toLowerCase()} taxi, local cab ${name.toLowerCase()}, outstation cab ${name.toLowerCase()}, airport taxi ${name.toLowerCase()}, wedding car ${name.toLowerCase()}, car rental ${name.toLowerCase()}, rohit travels ${name.toLowerCase()}`;
   const canonical = `https://rohittravels.com/cities/${slug}/`;
@@ -32,7 +32,7 @@ function generateCityMainPage(city, allCities, cityRoutes) {
   const nearbyRoutes = cityRoutes.slice(0,8);
   const otherCities = allCities.filter(c => c.slug !== slug && c.tier <= 2).slice(0,12);
 
-  const head = getHead({ title, metaDesc, keywords, canonical, breadcrumbSchema, extraSchema: taxiSchema });
+  const head = getHead({ title, metaDesc, keywords, canonical, breadcrumbSchema, extraSchema: [taxiSchema, faqSchema] });
 
   return `${head}
 ${getHeader()}

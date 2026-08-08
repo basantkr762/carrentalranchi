@@ -8,7 +8,7 @@ const { getHead, getHeader, getFooter, getFAQItem, getVehicleCards, getCTABanner
 function generateRoutePage(route, fromCity, toCity, allRoutes, allCities) {
   const from = fromCity.name, to = toCity.name;
   const reverseSlug = `${route.toSlug}-to-${route.fromSlug}-cab`;
-  const title = `${from} to ${to} Cab @₹11/km | Taxi Fare, Booking | Rohit Travels`;
+  const title = `${from} to ${to} Cab | ₹11/km Taxi | Rohit Travels`;
   const metaDesc = `Book ${from} to ${to} cab at ₹11/km. Distance ${route.dist}, Time ${route.time}. Sedan ₹${route.sedanOW}, SUV ₹${route.suvOW}. One-way & round trip. Call +91-7903629240`;
   const keywords = `${from.toLowerCase()} to ${to.toLowerCase()} cab, ${from.toLowerCase()} to ${to.toLowerCase()} taxi, ${from.toLowerCase()} to ${to.toLowerCase()} taxi fare, ${from.toLowerCase()} to ${to.toLowerCase()} car rental, cab from ${from.toLowerCase()} to ${to.toLowerCase()}, one way taxi ${from.toLowerCase()} ${to.toLowerCase()}, outstation cab ${from.toLowerCase()}, ${to.toLowerCase()} to ${from.toLowerCase()} cab`;
   const canonical = `https://rohittravels.com/routes/${route.slug}.html`;

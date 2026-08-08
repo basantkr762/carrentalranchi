@@ -8,7 +8,7 @@ const { getHead, getHeader, getFooter, getFAQItem, getVehicleCards, getCTABanner
 // ===== LOCAL CAB PAGE =====
 function generateLocalCabPage(city, allCities) {
   const n = city.name, s = city.slug;
-  const title = `Local Cab Service in ${n} | Hourly Taxi Hire @₹11/km | Rohit Travels`;
+  const title = `Local Cab Service in ${n} @₹11/km | Rohit Travels`;
   const metaDesc = `Book local cab in ${n} at ₹11/km. Hourly taxi hire: 4hr/40km ₹1,200, 8hr/80km ₹2,000. City tours, hospital visits, shopping trips. Call +91-7903629240`;
   const keywords = `local cab ${n.toLowerCase()}, local taxi ${n.toLowerCase()}, hourly cab hire ${n.toLowerCase()}, city taxi ${n.toLowerCase()}, local car rental ${n.toLowerCase()}, ${n.toLowerCase()} local cab service, taxi near me ${n.toLowerCase()}, cab near me ${n.toLowerCase()}`;
   const canonical = `https://rohittravels.com/cities/${s}/local-cab.html`;
@@ -100,7 +100,7 @@ ${getFooter(n)}`;
 // ===== OUTSTATION CAB PAGE =====
 function generateOutstationPage(city, allCities, cityRoutes) {
   const n = city.name, s = city.slug;
-  const title = `Outstation Cab from ${n} | One-Way & Round Trip @₹11/km | Rohit Travels`;
+  const title = `Outstation Cab from ${n} @₹11/km | Rohit Travels`;
   const metaDesc = `Book outstation cab from ${n} at ₹11/km. One-way & round-trip taxi to Ranchi, Jamshedpur, Patna, Kolkata & 50+ cities. Call +91-7903629240`;
   const keywords = `outstation cab from ${n.toLowerCase()}, outstation taxi ${n.toLowerCase()}, one way cab ${n.toLowerCase()}, round trip cab ${n.toLowerCase()}, ${n.toLowerCase()} to ranchi cab, ${n.toLowerCase()} outstation cab service`;
   const canonical = `https://rohittravels.com/cities/${s}/outstation-cab.html`;
@@ -190,7 +190,7 @@ function generateAirportPage(city) {
   const n = city.name, s = city.slug;
   const airportName = city.airport || 'Birsa Munda Airport Ranchi';
   const hasAirport = !!city.airport;
-  const title = `Airport Taxi ${n} | ${airportName} Cab @₹11/km | Rohit Travels`;
+  const title = `Airport Taxi in ${n} @₹11/km | Rohit Travels`;
   const metaDesc = `${hasAirport ? `24/7 airport taxi to ${airportName}` : `Airport cab from ${n} to nearest airports`}. Flight tracking, no surge. Sedan ₹11/km. Call +91-7903629240`;
   const keywords = `airport taxi ${n.toLowerCase()}, airport cab ${n.toLowerCase()}, ${airportName.toLowerCase()} taxi, ${airportName.toLowerCase()} cab, ${n.toLowerCase()} airport transfer, flight pickup ${n.toLowerCase()}`;
   const canonical = `https://rohittravels.com/cities/${s}/airport-taxi.html`;
@@ -266,7 +266,7 @@ ${getFooter(n)}`;
 // ===== WEDDING CAR PAGE =====
 function generateWeddingPage(city) {
   const n = city.name, s = city.slug;
-  const title = `Wedding Car Rental ${n} | Marriage Car Booking | Luxury Cars | Rohit Travels`;
+  const title = `Wedding Car Rental in ${n} | Luxury Cars | Rohit Travels`;
   const metaDesc = `Luxury wedding car rental in ${n}. Audi, BMW, Innova Crysta for barat, reception & vidaai. Decorated cars from ₹5,000. Book: +91-7903629240`;
   const keywords = `wedding car ${n.toLowerCase()}, marriage car booking ${n.toLowerCase()}, wedding car rental ${n.toLowerCase()}, luxury car for wedding ${n.toLowerCase()}, barat car ${n.toLowerCase()}, audi for wedding ${n.toLowerCase()}, bmw for wedding ${n.toLowerCase()}, decorated car ${n.toLowerCase()}`;
   const canonical = `https://rohittravels.com/cities/${s}/wedding-car.html`;
@@ -352,13 +352,24 @@ ${getFooter(n)}`;
 // ===== POPULAR ROUTES PAGE =====
 function generatePopularRoutesPage(city, cityRoutes) {
   const n = city.name, s = city.slug;
-  const title = `Popular Cab Routes from ${n} | Outstation Taxi Fares | Rohit Travels`;
+  const title = `Popular Cab Routes from ${n} | Rohit Travels`;
   const metaDesc = `Compare all cab routes from ${n} with fares, distances & travel times. Book outstation taxi at ₹11/km. 50+ destinations. Call +91-7903629240`;
   const keywords = `cab routes from ${n.toLowerCase()}, ${n.toLowerCase()} outstation routes, taxi fare from ${n.toLowerCase()}, ${n.toLowerCase()} cab destinations, popular routes ${n.toLowerCase()}`;
   const canonical = `https://rohittravels.com/cities/${s}/popular-routes.html`;
   const bc = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rohittravels.com/"},{"@type":"ListItem","position":2,"name":`Cab in ${n}`,"item":`https://rohittravels.com/cities/${s}/`},{"@type":"ListItem","position":3,"name":"Popular Routes","item":canonical}]};
+  const topRoutes = (cityRoutes || []).slice(0, 6);
+  const topNames = topRoutes.map(r => r.toName).slice(0, 4).join(', ');
+  const fareLine = topRoutes[0] ? `Sedan one-way fares start at ₹${topRoutes[0].sedanOW} for ${n} to ${topRoutes[0].toName}, ₹${topRoutes[0].suvOW} for SUV.` : `All routes start at ₹11/km.`;
+  const faq = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":`Which are the most popular cab routes from ${n}?`,"acceptedAnswer":{"@type":"Answer","text":`Top outstation routes from ${n} include ${topNames || 'all major Jharkhand cities'}. ${fareLine} All fares include driver allowance and fuel. Book at ₹11/km with Rohit Travels.`}},
+    {"@type":"Question","name":`What is the taxi fare from ${n} to nearby cities?`,"acceptedAnswer":{"@type":"Answer","text":`${fareLine} Round-trip rates are roughly 1.8x the one-way fare and include driver stay. Crysta pricing adds ~30% to SUV fares. Call +91-7903629240 for exact quotes.`}},
+    {"@type":"Question","name":`How do I book an outstation cab from ${n}?`,"acceptedAnswer":{"@type":"Answer","text":`Call +91-7903629240 or WhatsApp with your destination, travel date, pickup time and passenger count. Get instant confirmation with driver details. One-way and round-trip both available 24/7.`}},
+    {"@type":"Question","name":`Is one-way cab available from ${n}?`,"acceptedAnswer":{"@type":"Answer","text":`Yes! One-way drop service from ${n} to all destinations — you pay only for the distance travelled with no return charges. Ideal for airport drops, relocations and one-time trips.`}},
+    {"@type":"Question","name":`Which cars are available for outstation travel from ${n}?`,"acceptedAnswer":{"@type":"Answer","text":`Sedan (Dzire/Aura, 4-seater), SUV (Ertiga, 7-seater) and Innova Crysta (premium 7-seater). All cars are AC, GPS-enabled and driven by experienced highway drivers.`}},
+    {"@type":"Question","name":`Are toll and night charges extra on ${n} routes?`,"acceptedAnswer":{"@type":"Answer","text":`Yes, toll taxes and parking are paid extra as per actuals. Night charges of ₹200 apply for travel between 10 PM and 6 AM. All other fares are all-inclusive with no hidden costs.`}}
+  ]};
 
-  return `${getHead({title,metaDesc,keywords,canonical,breadcrumbSchema:bc})}
+  return `${getHead({title,metaDesc,keywords,canonical,breadcrumbSchema:bc,extraSchema:faq})}
 ${getHeader()}
     <div class="container"><div class="breadcrumb"><a href="/">Home</a> <span>›</span> <a href="/cities/${s}/">Cab in ${n}</a> <span>›</span> <strong>Popular Routes</strong></div></div>
     <section class="route-hero">
@@ -389,6 +400,17 @@ ${cityRoutes.map(r => `            <tr><td><a href="/routes/${r.slug}.html" styl
         <p>All fares include driver allowance and fuel. Toll, parking, and night charges (₹200 for 10PM-6AM) are extra. Call <a href="tel:+917903629240" style="color:#667eea;font-weight:600">+91 7903629240</a> for exact quotes.</p>
     </div></div></section>
     <section class="route-section"><div class="container">${getCTABanner(`Cab from ${n}`)}</div></section>
+    <section class="route-section"><div class="container">
+        <h2>❓ FAQs – Outstation Cab Routes from ${n}</h2>
+        <div class="faq-section">
+${getFAQItem(`Which are the most popular cab routes from ${n}?`,`Top outstation routes from ${n} include ${topNames || 'all major Jharkhand cities'}. ${fareLine} All fares include driver allowance and fuel. Book at ₹11/km with Rohit Travels.`,true)}
+${getFAQItem(`What is the taxi fare from ${n} to nearby cities?`,`${fareLine} Round-trip rates are roughly 1.8x the one-way fare and include driver stay. Crysta pricing adds ~30% to SUV fares. Call +91-7903629240 for exact quotes.`)}
+${getFAQItem(`How do I book an outstation cab from ${n}?`,`Call +91-7903629240 or WhatsApp with your destination, travel date, pickup time and passenger count. Get instant confirmation with driver details. One-way and round-trip both available 24/7.`)}
+${getFAQItem(`Is one-way cab available from ${n}?`,`Yes! One-way drop service from ${n} to all destinations — you pay only for the distance travelled with no return charges. Ideal for airport drops, relocations and one-time trips.`)}
+${getFAQItem(`Which cars are available for outstation travel from ${n}?`,`Sedan (Dzire/Aura, 4-seater), SUV (Ertiga, 7-seater) and Innova Crysta (premium 7-seater). All cars are AC, GPS-enabled and driven by experienced highway drivers.`)}
+${getFAQItem(`Are toll and night charges extra on ${n} routes?`,`Yes, toll taxes and parking are paid extra as per actuals. Night charges of ₹200 apply for travel between 10 PM and 6 AM. All other fares are all-inclusive with no hidden costs.`)}
+        </div>
+    </div></section>
     </main>
 ${getFooter(n)}`;
 }
@@ -396,13 +418,22 @@ ${getFooter(n)}`;
 // ===== TOUR PACKAGES PAGE =====
 function generateTourPage(city) {
   const n = city.name, s = city.slug;
-  const title = `Tour Packages ${n} | Sightseeing Cab | Places to Visit | Rohit Travels`;
-  const metaDesc = `Explore ${n} with guided tour packages. Visit ${city.landmarks.slice(0,3).join(', ')} & more. AC cab with driver @₹11/km. Call +91-7903629240`;
+  const title = `Tour Packages in ${n} | Sightseeing Cab | Rohit Travels`;
+  const metaDesc = `Explore ${n} with guided tour packages. Visit ${city.landmarks.slice(0,3).join(', ')} & more. Call +91-7903629240`;
   const keywords = `tour packages ${n.toLowerCase()}, sightseeing cab ${n.toLowerCase()}, places to visit ${n.toLowerCase()}, ${n.toLowerCase()} tourism, ${n.toLowerCase()} trip, ${n.toLowerCase()} darshan cab`;
   const canonical = `https://rohittravels.com/cities/${s}/tour-packages.html`;
   const bc = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rohittravels.com/"},{"@type":"ListItem","position":2,"name":`Cab in ${n}`,"item":`https://rohittravels.com/cities/${s}/`},{"@type":"ListItem","position":3,"name":"Tour Packages","item":canonical}]};
+  const lms = city.landmarks.slice(0, 3).join(', ');
+  const faq = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":`What are the best tour packages in ${n}?`,"acceptedAnswer":{"@type":"Answer","text":`We offer half-day (4hr/40km from ₹1,200), full-day (8hr/80km from ₹2,000), extended (12hr/120km from ₹3,000) and 2-day tour packages starting ₹5,500. All include a driver-cum-guide, fuel and AC.`}},
+    {"@type":"Question","name":`How much does a sightseeing cab in ${n} cost?`,"acceptedAnswer":{"@type":"Answer","text":`Sightseeing cab in ${n} starts at ₹11/km. Sedan: ₹1,200 (4hr/40km), SUV: ₹1,600, Crysta: ₹2,000. Full-day sedan: ₹2,000 (8hr/80km). No surge pricing, transparent rates.`}},
+    {"@type":"Question","name":`Which places can I visit on a ${n} tour?`,"acceptedAnswer":{"@type":"Answer","text":`Popular attractions include ${lms}. ${city.localAttractions ? 'You can also explore ' + city.localAttractions + ' with our local drivers. ' : ''}Custom itineraries are welcome — tell us your preferred spots.`}},
+    {"@type":"Question","name":`Can I customize my tour itinerary in ${n}?`,"acceptedAnswer":{"@type":"Answer","text":`Absolutely! Our tour packages are fully customizable. Add or skip attractions, choose start time, and travel at your own pace. Your driver will help plan the best route and timing.`}},
+    {"@type":"Question","name":`How do I book a tour package in ${n}?`,"acceptedAnswer":{"@type":"Answer","text":`Call +91-7903629240 or WhatsApp with your preferred date, duration and places to visit. We confirm instantly with driver details. Customized packages available for families, groups and pilgrims.`}},
+    {"@type":"Question","name":`What is the best time for sightseeing in ${n}?`,"acceptedAnswer":{"@type":"Answer","text":`October to March offers the most pleasant weather for touring ${n}. Start early morning to cover maximum spots comfortably. November to February is ideal for outdoor visits.`}}
+  ]};
 
-  return `${getHead({title,metaDesc,keywords,canonical,breadcrumbSchema:bc})}
+  return `${getHead({title,metaDesc,keywords,canonical,breadcrumbSchema:bc,extraSchema:faq})}
 ${getHeader()}
     <div class="container"><div class="breadcrumb"><a href="/">Home</a> <span>›</span> <a href="/cities/${s}/">Cab in ${n}</a> <span>›</span> <strong>Tour & Sightseeing</strong></div></div>
     <section class="route-hero" style="background:linear-gradient(135deg,#00b09b 0%,#96c93d 100%)">
@@ -459,6 +490,17 @@ ${city.landmarks.map((l,i) => `            <div class="highlight-card">
         <p>Ready to explore ${n}? Call <a href="tel:+917903629240" style="color:#667eea;font-weight:600">+91 7903629240</a> or <a href="https://wa.me/917903629240" style="color:#25D366;font-weight:600">WhatsApp</a>. Customized itineraries available for individuals, families, and groups.</p>
     </div></div></section>
     <section class="route-section"><div class="container">${getCTABanner(`Tour Package in ${n}`)}</div></section>
+    <section class="route-section"><div class="container">
+        <h2>❓ FAQs – Tour & Sightseeing in ${n}</h2>
+        <div class="faq-section">
+${getFAQItem(`What are the best tour packages in ${n}?`,`We offer half-day (4hr/40km from ₹1,200), full-day (8hr/80km from ₹2,000), extended (12hr/120km from ₹3,000) and 2-day tour packages starting ₹5,500. All include a driver-cum-guide, fuel and AC.`,true)}
+${getFAQItem(`How much does a sightseeing cab in ${n} cost?`,`Sightseeing cab in ${n} starts at ₹11/km. Sedan: ₹1,200 (4hr/40km), SUV: ₹1,600, Crysta: ₹2,000. Full-day sedan: ₹2,000 (8hr/80km). No surge pricing, transparent rates.`)}
+${getFAQItem(`Which places can I visit on a ${n} tour?`,`Popular attractions include ${lms}. ${city.localAttractions ? 'You can also explore ' + city.localAttractions + ' with our local drivers. ' : ''}Custom itineraries are welcome — tell us your preferred spots.`)}
+${getFAQItem(`Can I customize my tour itinerary in ${n}?`,`Absolutely! Our tour packages are fully customizable. Add or skip attractions, choose start time, and travel at your own pace. Your driver will help plan the best route and timing.`)}
+${getFAQItem(`How do I book a tour package in ${n}?`,`Call +91-7903629240 or WhatsApp with your preferred date, duration and places to visit. We confirm instantly with driver details. Customized packages available for families, groups and pilgrims.`)}
+${getFAQItem(`What is the best time for sightseeing in ${n}?`,`October to March offers the most pleasant weather for touring ${n}. Start early morning to cover maximum spots comfortably. November to February is ideal for outdoor visits.`)}
+        </div>
+    </div></section>
     </main>
 ${getFooter(n)}`;
 }
