@@ -4,14 +4,12 @@
 # ================================================================
 
 # ================================================================
-# GOOGLEBOT — Full access, no crawl delay (highest priority)
+# GOOGLEBOT — Full access (no Crawl-delay, Google ignores it)
 # ================================================================
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
 User-agent: Googlebot-Image
-Allow: /images/
 Allow: /
 
 User-agent: Googlebot-Mobile
@@ -23,32 +21,30 @@ Allow: /
 User-agent: Google-InspectionTool
 Allow: /
 
-# Google Gemini / Bard (AI search — explicitly allowed)
+# Google AI / Gemini
 User-agent: Google-Extended
 Allow: /
 
 # ================================================================
-# BING / MICROSOFT BOTS
+# BING / MICROSOFT
 # ================================================================
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
 User-agent: MSNBot
 Allow: /
 
 User-agent: MSNBot-Media
-Allow: /images/
+Allow: /
 
 # ================================================================
-# OTHER MAJOR SEARCH ENGINES
+# OTHER SEARCH ENGINES
 # ================================================================
 User-agent: Baiduspider
 Allow: /
 
 User-agent: Yandex
 Allow: /
-Crawl-delay: 2
 
 User-agent: DuckDuckBot
 Allow: /
@@ -57,41 +53,32 @@ User-agent: Slurp
 Allow: /
 
 # ================================================================
-# AI BOTS — Explicitly allowed for AI Search & LLM Training
+# AI BOTS — Explicitly allowed
 # ================================================================
-
-# OpenAI GPT (ChatGPT)
 User-agent: GPTBot
 Allow: /
 
-# Anthropic Claude
 User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
-# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 
-# Meta AI
 User-agent: FacebookBot
 Allow: /
 
-# Apple
 User-agent: Applebot
 Allow: /
 
-# Common Crawl (used by AI training)
 User-agent: CCBot
 Allow: /
 
-# Cohere AI
 User-agent: cohere-ai
 Allow: /
 
-# Amazon
 User-agent: Amazonbot
 Allow: /
 
@@ -117,18 +104,16 @@ User-agent: Discordbot
 Allow: /
 
 # ================================================================
-# SEO TOOL BOTS (rate-limited)
+# SEO TOOL BOTS
 # ================================================================
 User-agent: AhrefsBot
 Allow: /
-Crawl-delay: 10
 
 User-agent: SemrushBot
 Allow: /
-Crawl-delay: 10
 
 # ================================================================
-# BLOCKED BOTS (spam/scrapers)
+# BLOCKED BOTS
 # ================================================================
 User-agent: MJ12bot
 Disallow: /
@@ -137,19 +122,13 @@ User-agent: DotBot
 Disallow: /
 
 # ================================================================
-# DEFAULT: Allow all ethical crawlers
+# DEFAULT — All other crawlers
 # ================================================================
 User-agent: *
 Allow: /
-Allow: /cities/
-Allow: /routes/
-Allow: /images/
 Disallow: /cgi-bin/
 Disallow: /admin/
 Disallow: /private/
-Disallow: /*.json$
-Disallow: /sw.js
-Crawl-delay: 1
 
 # ================================================================
 # SITEMAPS
