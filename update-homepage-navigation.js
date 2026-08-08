@@ -87,7 +87,7 @@ const navWidgetHtml = `
             matches.forEach(function(m) {
                 var icon = m.u.indexOf('/routes/') !== -1 ? 'fa-route' : 'fa-building';
                 var badge = m.u.indexOf('/routes/') !== -1 ? 'Route' : 'City';
-                html += '<a href="' + m.u + '" style="display:flex; align-items:center; justify-content:space-between; padding:14px 20px; border-bottom:1px solid #f0f0f0; text-decoration:none; color:#333; font-weight:600; font-size:15px; transition:background 0.2s;" onmouseover="this.style.background=\'#f4fbf9\'" onmouseout="this.style.background=\'white\'">' +
+                html += '<a href="' + m.u + '" style="display:flex; align-items:center; justify-content:space-between; padding:14px 20px; border-bottom:1px solid #f0f0f0; text-decoration:none; color:#333; font-weight:600; font-size:15px; transition:background 0.2s;" onmouseover="this.style.background=\\'#f4fbf9\\'" onmouseout="this.style.background=\\'white\\'">\' +
                         '<span><i class="fas ' + icon + '" style="color:#0a6b61; margin-right:10px;"></i>' + m.t + '</span>' +
                         '<span style="background:#e8f5e9; color:#0a6b61; font-size:12px; padding:3px 10px; border-radius:12px; font-weight:bold;">' + badge + ' →</span>' +
                         '</a>';
