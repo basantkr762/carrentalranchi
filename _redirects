@@ -4,15 +4,8 @@
 # www → non-www (301 permanent)
 https://www.rohittravels.com/* https://rohittravels.com/:splat 301
 
-# Remove index.html from URLs (clean URLs)
-/index.html / 301
-/routes/index.html /routes/ 301
-/cities/index.html /cities/ 301
-
 # Common misspellings / alternate URL patterns
 /ranchi-cab /routes/ranchi-local-taxi.html 301
 /airport-taxi /routes/ranchi-airport-taxi.html 301
 /outstation /routes/ 301
-
-# 404 fallback → homepage
-/* /index.html 200
+/city-taxi /cities/ 301

@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>All City Taxi Service Directory (378+ Cities) | Rohit Travels Ranchi</title>
+    <meta name="description" content="Explore local taxi and cab service landing pages across 378+ cities and towns in Jharkhand. Rohit Travels 24/7 cab booking at ₹11/km.">
+    <meta name="keywords" content="city taxi directory jharkhand, taxi in jharkhand cities, local cab service directory">
+    <link rel="canonical" href="https://rohittravels.com/cities/">
+    <link rel="icon" type="image/webp" href="/images/rohittravelslogo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <style>
+        .dir-header { background: linear-gradient(135deg, #0a6b61 0%, #38ef7d 100%); color: white; padding: 60px 20px; text-align: center; }
+        .dir-header h1 { font-size: 36px; margin-bottom: 15px; }
+        .dir-header p { font-size: 18px; max-width: 800px; margin: 0 auto 25px; opacity: 0.95; }
+        .search-box-wrap { max-width: 650px; margin: 0 auto; position: relative; }
+        .search-input { width: 100%; padding: 18px 25px 18px 55px; border-radius: 50px; border: none; font-size: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); outline: none; }
+        .search-icon { position: absolute; left: 22px; top: 50%; transform: translateY(-50%); color: #0a6b61; font-size: 20px; }
+        .dir-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .dir-stats { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 15px; }
+        .grid-routes { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; }
+        .route-card { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 12px; text-decoration: none; color: #333; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        .route-card:hover { border-color: #0a6b61; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(10,107,97,0.15); background: #f4fbf9; }
+        .route-card i { color: #0a6b61; font-size: 18px; }
+        .route-card span { font-weight: 600; font-size: 15px; flex-grow: 1; margin: 0 12px; }
+        .route-card .arrow { color: #ccc; font-size: 14px; transition: color 0.3s; }
+        .route-card:hover .arrow { color: #0a6b61; }
+        .no-results { text-align: center; padding: 50px; font-size: 20px; color: #777; display: none; }
+        .back-nav { display: inline-flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-weight: bold; margin-bottom: 20px; background: rgba(255,255,255,0.2); padding: 8px 18px; border-radius: 20px; }
+    </style>
+</head>
+<body>
+    <div class="dir-header">
+        <a href="/" class="back-nav"><i class="fas fa-arrow-left"></i> Back to Homepage</a>
+        <h1><i class="fas fa-city"></i> All City Taxi Service Directory</h1>
+        <p>Explore city-wide taxi service coverage across 378+ locations in Jharkhand at ₹11/km.</p>
+        <div class="search-box-wrap">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="citySearch" class="search-input" placeholder="Type city or area name (e.g. Dhanbad, Bokaro, Hazaribagh)..." onkeyup="filterCities()">
+        </div>
+    </div>
+
+    <div class="dir-container">
+        <div class="dir-stats">
+            <h2 style="margin:0; font-size:22px; color:#333;"><i class="fas fa-list"></i> Total City Locations: <span style="color:#0a6b61;">378</span></h2>
+            <span style="color:#666; font-weight:500;">Sorted Alphabetically</span>
+        </div>
+
+        <div id="noResults" class="no-results">
+            <i class="fas fa-search-minus" style="font-size:40px; margin-bottom:15px; color:#0a6b61;"></i><br>
+            No location found matching your search. <br>
+            <a href="tel:+917903629240" style="color:#0a6b61; font-weight:bold;">Call +91 7903629240</a> for custom city pickup!
+        </div>
+
+        <div class="grid-routes" id="citiesGrid">
+            <a href="/cities/adityapur/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/adityapur/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/adityapur/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/adityapur/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/adityapur/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/adityapur/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/asansol/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/asansol/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/asansol/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/asansol/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/asansol/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/asansol/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bagodar/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bagodar/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bagodar/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bagodar/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bagodar/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bagodar/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/barhi/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/barhi/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/barhi/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/barhi/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/barhi/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/barhi/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/betla/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/betla/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/betla/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/betla/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/betla/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/betla/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bhubaneswar/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bhubaneswar/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bhubaneswar/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bhubaneswar/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bhubaneswar/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bhubaneswar/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bokaro/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bokaro/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bokaro/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bokaro/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bokaro/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bokaro/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bundu/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bundu/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bundu/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bundu/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bundu/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/bundu/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chaibasa/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chaibasa/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chaibasa/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chaibasa/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chaibasa/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chaibasa/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chakradharpur/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chakradharpur/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chakradharpur/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chakradharpur/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chakradharpur/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chakradharpur/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chandil/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chandil/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chandil/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chandil/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chandil/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chandil/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chas/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chas/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chas/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chas/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chas/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chas/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chatra/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chatra/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chatra/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chatra/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chatra/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/chatra/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/daltonganj/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/daltonganj/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/daltonganj/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/daltonganj/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/daltonganj/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/daltonganj/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/deoghar/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/deoghar/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/deoghar/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/deoghar/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/deoghar/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/deoghar/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/dhanbad/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/dhanbad/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/dhanbad/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/dhanbad/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/dhanbad/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/dhanbad/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/dumka/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/dumka/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/dumka/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/dumka/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/dumka/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/dumka/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/garhwa/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/garhwa/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/garhwa/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/garhwa/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/garhwa/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/garhwa/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gaya/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gaya/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gaya/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gaya/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gaya/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gaya/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ghatshila/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ghatshila/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ghatshila/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ghatshila/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ghatshila/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ghatshila/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/giridih/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/giridih/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/giridih/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/giridih/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/giridih/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/giridih/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/godda/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/godda/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/godda/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/godda/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/godda/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/godda/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gola/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gola/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gola/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gola/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gola/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gola/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gumla/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gumla/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gumla/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gumla/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gumla/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/gumla/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/hazaribagh/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/hazaribagh/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/hazaribagh/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/hazaribagh/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/hazaribagh/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/hazaribagh/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/hussainabad/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/hussainabad/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/hussainabad/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/hussainabad/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/hussainabad/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/hussainabad/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/itkhori/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/itkhori/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/itkhori/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/itkhori/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/itkhori/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/itkhori/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jamshedpur/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jamshedpur/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jamshedpur/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jamshedpur/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jamshedpur/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jamshedpur/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jamtara/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jamtara/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jamtara/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jamtara/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jamtara/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jamtara/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jhalda/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jhalda/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jhalda/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jhalda/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jhalda/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jhalda/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jharia/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jharia/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jharia/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jharia/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jharia/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/jharia/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/khunti/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/khunti/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/khunti/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/khunti/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/khunti/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/khunti/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/koderma/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/koderma/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/koderma/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/koderma/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/koderma/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/koderma/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/kolkata/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/kolkata/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/kolkata/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/kolkata/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/kolkata/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/kolkata/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/latehar/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/latehar/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/latehar/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/latehar/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/latehar/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/latehar/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/lohardaga/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/lohardaga/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/lohardaga/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/lohardaga/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/lohardaga/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/lohardaga/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/madhupur/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/madhupur/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/madhupur/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/madhupur/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/madhupur/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/madhupur/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/maluti/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/maluti/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/maluti/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/maluti/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/maluti/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/maluti/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mango/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mango/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mango/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mango/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mango/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mango/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mccluskieganj/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mccluskieganj/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mccluskieganj/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mccluskieganj/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mccluskieganj/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mccluskieganj/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mihijam/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mihijam/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mihijam/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mihijam/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mihijam/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/mihijam/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/netarhat/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/netarhat/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/netarhat/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/netarhat/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/netarhat/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/netarhat/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/pakur/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/pakur/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/pakur/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/pakur/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/pakur/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/pakur/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/parasnath/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/parasnath/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/parasnath/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/parasnath/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/parasnath/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/parasnath/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/patna/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/patna/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/patna/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/patna/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/patna/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/patna/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/patratu/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/patratu/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/patratu/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/patratu/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/patratu/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/patratu/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/phusro/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/phusro/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/phusro/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/phusro/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/phusro/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/phusro/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/puri/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/puri/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/puri/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/puri/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/puri/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/puri/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rajmahal/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rajmahal/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rajmahal/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rajmahal/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rajmahal/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rajmahal/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rajrappa/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rajrappa/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rajrappa/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rajrappa/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rajrappa/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rajrappa/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ramgarh/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ramgarh/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ramgarh/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ramgarh/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ramgarh/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ramgarh/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ranchi/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ranchi/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ranchi/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ranchi/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ranchi/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/ranchi/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rourkela/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rourkela/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rourkela/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rourkela/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rourkela/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/rourkela/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/sahibganj/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/sahibganj/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/sahibganj/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/sahibganj/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/sahibganj/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/sahibganj/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/saraikela/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/saraikela/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/saraikela/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/saraikela/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/saraikela/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/saraikela/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/simdega/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/simdega/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/simdega/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/simdega/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/simdega/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/simdega/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/sindri/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/sindri/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/sindri/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/sindri/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/sindri/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/sindri/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tata-nagar-golmuri/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tata-nagar-golmuri/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tata-nagar-golmuri/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tata-nagar-golmuri/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tata-nagar-golmuri/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tata-nagar-golmuri/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tenughat/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tenughat/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tenughat/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tenughat/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tenughat/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tenughat/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tisri/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tisri/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tisri/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tisri/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tisri/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tisri/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/topchanchi/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/topchanchi/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/topchanchi/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/topchanchi/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/topchanchi/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/topchanchi/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tundi/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tundi/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tundi/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tundi/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tundi/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/tundi/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/varanasi/airport-taxi.html" class="route-card" data-title="airport taxi">
+            <i class="fas fa-building"></i>
+            <span>Airport Taxi</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/varanasi/local-cab.html" class="route-card" data-title="local cab">
+            <i class="fas fa-building"></i>
+            <span>Local Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/varanasi/outstation-cab.html" class="route-card" data-title="outstation cab">
+            <i class="fas fa-building"></i>
+            <span>Outstation Cab</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/varanasi/popular-routes.html" class="route-card" data-title="popular routes">
+            <i class="fas fa-building"></i>
+            <span>Popular Routes</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/varanasi/tour-packages.html" class="route-card" data-title="tour packages">
+            <i class="fas fa-building"></i>
+            <span>Tour Packages</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+<a href="/cities/varanasi/wedding-car.html" class="route-card" data-title="wedding car">
+            <i class="fas fa-building"></i>
+            <span>Wedding Car</span>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+        </div>
+    </div>
+
+    <footer style="background:#1a1a2e; color:white; padding:30px 20px; text-align:center; margin-top:60px;">
+        <p>&copy; 2026 Rohit Travels Ranchi. All Rights Reserved.</p>
+        <p style="font-size:13px; opacity:0.8;">Developed by <a href="https://basant.me" target="_blank" style="color:white;">Basant Kumar</a></p>
+    </footer>
+
+    <script>
+        function filterCities() {
+            var input = document.getElementById('citySearch').value.toLowerCase().trim();
+            var cards = document.querySelectorAll('.route-card');
+            var visibleCount = 0;
+
+            cards.forEach(function(card) {
+                var title = card.getAttribute('data-title');
+                if (title.indexOf(input) !== -1) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
